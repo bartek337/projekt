@@ -146,3 +146,13 @@ footer {
 .login-container button:hover {
     background-color: #003060;
 }
+
+main.content {
+    padding: 40px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+}
