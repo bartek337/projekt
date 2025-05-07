@@ -157,78 +157,52 @@ main.content {
     font-size: 1.1em;
 }
 
-.office-photo {
+#map {
+    height: 400px;
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    margin-bottom: 20px;
+    margin-top: 1em;
+    border: 2px solid #ccc;
     border-radius: 8px;
 }
-
-.kontakt-info i,
-.godziny i {
-    margin-right: 8px;
-    color: #003d99;
-}
-
-.kontakt-info p, .godziny li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-main.kontakt {
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.kontakt h2 {
-    color: #003d99;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.contact-container {
+/* Styl podstawowego menu */
+.nav-menu {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .contact-info h2, .contact-info h3 {
-    color: #003366;
-  }
-  
-  .contact-info p, .contact-info li, .contact-info a {
-    font-size: 16px;
-    margin: 8px 0;
-    color: #333;
+    background-color: #004080;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
     text-decoration: none;
-  }
-  
-  .contact-info i {
-    margin-right: 8px;
-    color: #0056b3;
-  }
-  
-  .contact-media {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0066cc;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    min-width: 220px;
+    z-index: 1;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .office-photo {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+.dropdown-content li {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
