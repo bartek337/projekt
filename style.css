@@ -156,3 +156,53 @@ main.content {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-size: 1.1em;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 1em;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+/* Styl podstawowego menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    background-color: #004080;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0066cc;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    min-width: 220px;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.dropdown-content li {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
