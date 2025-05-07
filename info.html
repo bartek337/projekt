@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civica – Informacje o Gminie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1>Civica – Gmina Trzebieszów</h1>
+            <a href="login.html" class="login-button">Zaloguj się</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="info.html" class="active">Informacje o Gminie</a></li>
+                <li><a href="panel.html">Panel Mieszkańca</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>O Gminie Trzebieszów</h2>
+
+            <article>
+                <h3>Historia</h3>
+                <p>
+                    Gmina Trzebieszów znajduje się w województwie lubelskim, w powiecie łukowskim.
+                    Jej dzieje sięgają średniowiecza – miejscowość pojawia się w dokumentach już w XV wieku.
+                    W okresie zaborów i II wojny światowej mieszkańcy aktywnie uczestniczyli w ruchach niepodległościowych.
+                </p>
+            </article>
+
+            <article>
+                <h3>Atrakcje turystyczne</h3>
+                <ul>
+                    <li>Kościół św. Bartłomieja Apostoła</li>
+                    <li>Rezerwat przyrody Jata</li>
+                    <li>Liczne szlaki rowerowe i piesze</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Władze gminy</h3>
+                <p>
+                    Wójtem Gminy Trzebieszów (stan na 2025) jest [uzupełnij imię i nazwisko]. 
+                    Rada Gminy składa się z radnych wybieranych przez mieszkańców.
+                </p>
+            </article>
+
+            <article>
+                <h3>Mapa Gminy Trzebieszów</h3>
+                <div id="map"></div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+    </footer>
+
+    <script>
+        const trzebieszowCoords = [51.967, 22.541];
+        const map = L.map('map').setView(trzebieszowCoords, 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker(trzebieszowCoords).addTo(map)
+            .bindPopup('Trzebieszów – centrum gminy')
+            .openPopup();
+    </script>
+</body>
+</html>
