@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktura Organizacyjna – Gmina Trzebieszów</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <h1>Civica – Gmina Trzebieszów</h1>
+      <a href="login.html" class="login-button">Zaloguj się</a>
+    </div>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="info.html">Informacje o Gminie</a></li>
+        <li><a href="panel.html">Władze Gminy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Struktura Organizacyjna Urzędu Gminy</h2>
+      <div class="container mt-4">
+        <p class="text-muted" id="structure-timestamp">
+            Stan struktury organizacyjnej na dzień: <span id="currentDateTime"></span>
+          </p>
+        <div class="accordion" id="structureAccordion">
+
+          <!-- Referat Finansowo-Księgowy -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingRF">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRF">
+                Referat Finansowo–Księgowy (RF)
+              </button>
+            </h2>
+            <div id="collapseRF" class="accordion-collapse collapse show" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <p><strong>Kierownik:</strong> Skarbnik Gminy / Główny Księgowy – Marta Zdunek</p>
+                <ul>
+                  <li>Dorota Mościcka – księgowość budżetowa</li>
+                  <li>Kamila Kowalczyk – księgowość budżetowa</li>
+                  <li>Agata Sójka – księgowość budżetowa, CEIDG</li>
+                  <li>Ewa Lipińska – płace</li>
+                  <li>Ewa Śledź – księgowość podatkowa, kasa, odpady</li>
+                  <li>Iwona Toporowicz – wymiar i księgowość podatkowa, odpady</li>
+                  <li>Urszula Nurzyńska – wymiar i realizacja podatków i opłat</li>
+                  <li>Ewa Agata Śledź – wymiar i realizacja podatków i opłat</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Referat Społeczno-Administracyjny -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSA">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSA">
+                Referat Społeczno–Administracyjny (SA)
+              </button>
+            </h2>
+            <div id="collapseSA" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <p><strong>Kierownik:</strong> Sekretarz Gminy – wakat</p>
+                <ul>
+                  <li>Agnieszka Ołdak – ewidencja ludności i dowody osobiste</li>
+                  <li>wakat – fundusze zewnętrzne, sekretariat</li>
+                  <li>TBD Mazowsze Sp. z o.o – systemy IT i bezpieczeństwo fizyczne (usługa zewnętrzna)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rada Gminy / ORG -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingORG">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseORG">
+                Referat Obsługi Rady Gminy (ORG)
+              </button>
+            </h2>
+            <div id="collapseORG" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <p><strong>Kierownik:</strong> wakat (w zastępstwie Sekretarz Gminy)</p>
+                <ul>
+                  <li>Elżbieta Ługowska – obsługa Rady Gminy i jej organów</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Referat Inwestycji -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingRI">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRI">
+                Referat Inwestycji (RI)
+              </button>
+            </h2>
+            <div id="collapseRI" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <p><strong>Kierownik:</strong> Marcin Sulej</p>
+                <ul>
+                  <li>Ewa Przybysz – zamówienia publiczne, inwestycje, archiwista</li>
+                  <li>wakat – stanowisko ds. inwestycji</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Referat Rozwoju Gospodarczego -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingRRG">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRRG">
+                Referat Rozwoju Gospodarczego (RRG)
+              </button>
+            </h2>
+            <div id="collapseRRG" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <p><strong>Kierownik:</strong> Marcin Mościcki</p>
+                <ul>
+                  <li>Paulina Gryczka – gospodarka przestrzenna, ochrona zwierząt</li>
+                  <li>Katarzyna Śledź – gospodarka przestrzenna, OSP</li>
+                  <li>Małgorzata Mościcka – gospodarka wodno-ściekowa, rolnictwo</li>
+                  <li>wakat – kontrola terenowa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Samodzielne stanowiska -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSAM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSAM">
+                Samodzielne stanowiska pracy
+              </button>
+            </h2>
+            <div id="collapseSAM" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>Ewa Palus (CBI) – Inspektor Ochrony Danych Osobowych</li>
+                  <li>Zastępca IOD – Agnieszka Błaziak (<a href="mailto:agnieszka.blaziak@cbi24.pl">agnieszka.blaziak@cbi24.pl</a>)</li>
+                  <li>Contract – Marek Raczko – obsługa prawna</li>
+                  <li>Zofia Parafian – sprzątaczka</li>
+                  <li>Adam Parafian, Jerzy Śledź, Adam Wiąckiewicz – konserwatorzy</li>
+                  <li>Palacze – sezonowe stanowisko pracy</li>
+                  <li>wakat – goniec</li>
+                  <li>Archiwista – (brak danych)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- USC -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingUSC">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUSC">
+                Urząd Stanu Cywilnego
+              </button>
+            </h2>
+            <div id="collapseUSC" class="accordion-collapse collapse" data-bs-parent="#structureAccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>Kierownik – Renata Nowik (również sprawy obronne i zarządzania kryzysowego)</li>
+                  <li>Zastępca Kierownika – Agnieszka Ołdak</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const dateElement = document.getElementById('currentDateTime');
+    const now = new Date();
+  
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    };
+  
+    const formatted = now.toLocaleString('pl-PL', options);
+    dateElement.textContent = formatted;
+  </script>
+</body>
+</html>
