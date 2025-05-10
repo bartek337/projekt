@@ -8,7 +8,6 @@
     <!-- Główny CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
@@ -42,24 +41,21 @@
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
-    </header>
-
-    <main class="content">
-        <section>
-            <h2>Barwy Gminy Trzebieszów</h2>
-            <p>Barwy Gminy Trzebieszów mają głębokie znaczenie symboliczne. Zostały wybrane tak, aby odzwierciedlały charakter naszej wspólnoty oraz jej bogatą historię.</p>
-            <h3>Opis Barw</h3>
-            <p>Herb gminy Trzebieszów przedstawia kolorystyczne połączenie zieleni oraz błękitu, które symbolizują równocześnie naturę oraz harmonię, jaka panuje w naszej gminie.</p>
-        </section>
-
-        <section>
-            <h2>Historia Gminy Trzebieszów</h2>
-        </section>
+    <main>
+        <div class="container py-4">
+            <h2>Sołectwa Gminy Trzebieszów</h2>
+            <div id="solectwa-lista" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+                <!-- Kafelki zostaną załadowane przez solectwa.js -->
+            </div>
+        </div>
     </main>
+    <!--MAPKA-->
+    <div id="mapa-solectw" style="height: 500px; margin-top: 2rem;"></div>
 
-    <footer>
-        <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+    <!-- Skrypt JS ładujący dane z JSON -->
+    <script src="solectwa.js"></script>
+    <footer class="mt-5">
+        <p>&copy; 2025 Gmina Trzebieszów. Wszelkie prawa zastrzeżone.</p>
     </footer>
-
 </body>
 </html>

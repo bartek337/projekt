@@ -158,11 +158,11 @@ main.content {
 }
 
 #map {
-    height: 400px;
     width: 100%;
-    margin-top: 1em;
+    height: 500px;
     border: 2px solid #ccc;
     border-radius: 8px;
+    margin-top: 1rem;
 }
 /* Styl podstawowego menu */
 .nav-menu {
@@ -261,6 +261,57 @@ ul {
 #structure-timestamp {
     font-style: italic;
     margin-bottom: 1rem;
-  }
+}
 
+ /* Styl ogólny siatki */
+#solectwa-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+/* Styl pojedynczej karty */
+.card {
+background-color: #ffffff;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 1.5rem;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tytuł sołectwa */
+.card-title {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 0.5rem;
+color: #2c3e50;
+}
+
+/* Tekst */
+.card-text {
+margin-bottom: 1rem;
+color: #555;
+}
+
+/* Przycisk */
+.card a.btn {
+display: inline-block;
+background-color: #0066cc;
+color: #fff;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 500;
+transition: background-color 0.2s;
+}
+
+.card a.btn:hover {
+background-color: #004999;
+}
 
