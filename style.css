@@ -158,11 +158,11 @@ main.content {
 }
 
 #map {
-    height: 400px;
     width: 100%;
-    margin-top: 1em;
+    height: 500px;
     border: 2px solid #ccc;
     border-radius: 8px;
+    margin-top: 1rem;
 }
 /* Styl podstawowego menu */
 .nav-menu {
@@ -191,12 +191,18 @@ main.content {
 
 /* Dropdown */
 .dropdown-content {
-    display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #004080;
     min-width: 220px;
     z-index: 1;
     flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .dropdown-content li {
@@ -204,5 +210,108 @@ main.content {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
+
+
+/* Obrazy */
+.chata,
+.kościół,
+.gmina-herb,
+.wojt,
+.marta {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/*do władz*/
+.official-card {
+    background-color: #f1f5fb;
+    border: 1px solid #d0dce7;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.official-card h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+/*do struktury*/
+.accordion-button {
+    background-color: #e8f0fe;
+    font-weight: bold;
+    color: #003366;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+#structure-timestamp {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+ /* Styl ogólny siatki */
+#solectwa-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+/* Styl pojedynczej karty */
+.card {
+background-color: #ffffff;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 1.5rem;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tytuł sołectwa */
+.card-title {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 0.5rem;
+color: #2c3e50;
+}
+
+/* Tekst */
+.card-text {
+margin-bottom: 1rem;
+color: #555;
+}
+
+/* Przycisk */
+.card a.btn {
+display: inline-block;
+background-color: #0066cc;
+color: #fff;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 500;
+transition: background-color 0.2s;
+}
+
+.card a.btn:hover {
+background-color: #004999;
+}
+
