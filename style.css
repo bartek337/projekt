@@ -322,3 +322,65 @@ headerjpg {
     text-align: center;
     position: relative;
 }
+
+/*produkty*/
+.produkty-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.produkt {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.produkt img.chata {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produkt-text {
+    max-width: 600px;
+}
+
+.produkt-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 300px;
+}
+
+#carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

@@ -16,8 +16,8 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Strona główna</a></li>
                 <li class="dropdown">
-                    <a href="info.html" class="dropbtn active">Informacje o Gminie</a>
-                    <ul class="dropdown-content">
+                    <a class="dropbtn" id="toggleDropdown">Informacje o Gminie</a>
+                    <ul class="dropdown-content" id="dropdownContent">
                         <li><a href="historia.html" class="active">Historia gminy</a></li>
                         <li><a href="barwy.html" class="active">Herb gminy</a></li>
                         <li><a href="wladze.html">Władze Gminy</a></li>
@@ -54,5 +54,12 @@
     <footer>
         <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
     </footer>
+    <script>
+        document.getElementById('toggleDropdown').addEventListener('click', function (e) {
+            e.preventDefault(); // blokuje domyślne przeładowanie
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.toggle('open');
+        });
+    </script>   
 </body>
 </html>
