@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,11 +7,12 @@ body {
 }
 
 header {
-    background-color: #004085;
+    background: linear-gradient(to bottom, #0b5d10, #01903b);
     color: white;
     padding: 20px;
     text-align: center;
 }
+
 
 nav ul {
     list-style: none;
@@ -30,7 +32,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #00b34e;
     text-decoration: underline;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: scale(1.05);
@@ -52,7 +54,7 @@ main {
 }
 
 footer {
-    background-color: #004085;
+    background-color: #0b5d10;
     color: white;
     text-align: center;
     padding: 10px;
@@ -79,7 +81,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     background-color: #ffffff;
-    color: #004085;
+    color: #0b5d10;
     padding: 8px 12px;
     border-radius: 4px;
     text-decoration: none;
@@ -127,12 +129,12 @@ footer {
 .login-container .forgot-password {
     text-align: right;
     font-size: 0.9em;
-    color: #004085;
+    color: #0b5d10;
     text-decoration: none;
 }
 
 .login-container button {
-    background-color: #004085;
+    background-color: #0b5d10;
     color: white;
     border: none;
     padding: 12px;
@@ -167,7 +169,7 @@ main.content {
 .nav-menu {
     list-style: none;
     display: flex;
-    background-color: #004080;
+    background: linear-gradient(to bottom, #00a542, #01903b);
     margin: 0;
     padding: 0;
 }
@@ -185,7 +187,7 @@ main.content {
 }
 
 .nav-menu a:hover {
-    background-color: #0066cc;
+    background-color: #0b5d10;
 }
 
 /* Dropdown */
@@ -193,7 +195,7 @@ main.content {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #004080;
+    background-color: #0b5d10;
     min-width: 220px;
     z-index: 1;
     flex-direction: column;
@@ -384,3 +386,88 @@ headerjpg {
 .next {
     right: 0;
 }
+
+.contact-wrapper {
+    padding: 40px;
+  }
+  
+  .contact-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .contact-info {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .contact-photo {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .office-photo {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+  
+  .contact-map {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .contact-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .contact-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .contact-side {
+    flex: 0 0 12%;
+    background-image: url('https://img.freepik.com/premium-zdjecie/jesienny-krajobraz-lasu_102332-4218.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+  
+  /* Lewa kolumna pokazuje lewą stronę zdjęcia */
+  .left-side {
+    background-position: left center;
+  }
+  
+  /* Prawa kolumna pokazuje prawą stronę zdjęcia */
+  .right-side {
+    background-position: right center;
+  }
+  
+  /* Środkowa kolumna (kontakt) */
+  .contact-wrapper {
+    flex: 0 0 76%;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  
