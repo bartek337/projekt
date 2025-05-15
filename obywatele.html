@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honorowi Obywatele – Gmina Trzebieszów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="background-color: white;">
+      <div class="top-bar">
+        <h1>Civica – Gmina Trzebieszów</h1>
+        <a href="login.html" class="login-button">Zaloguj się</a>
+      </div>
+  
+      <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Strona główna</a></li>
+            <li class="dropdown">
+                <a href="info.html" class="dropbtn active">Informacje o Gminie</a>
+                <ul class="dropdown-content">
+                    <li><a href="historia.html" class="active">Historia gminy</a></li>
+                    <li><a href="barwy.html" class="active">Herb gminy</a></li>
+                    <li><a href="wladze.html">Władze Gminy</a></li>
+                    <li><a href="struktura.html">Struktura Organizacyjna</a></li>
+                    <li><a href="solectwa.html">Sołectwa</a></li>
+                    <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
+                    <li><a href="produkty.html">Produkty Lokalne</a></li>
+                    <li><a href="obywatele.html">Honorowi Obywatele</a></li>
+                    <li><a href="publikacje.html">Publikacje o gminie</a></li>
+                    <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
+                    <li><a href="partnerstwo.html">Partnerstwo i współpraca</a></li>
+                </ul>
+            </li>
+            <li><a href="panel.html">Panel Mieszkańca</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+     </nav>
+    </header>
+   
+       
+    <main class="content">
+        <h2 style="text-align:center;">Honorowi Obywatele Gminy</h2>
+        <p style="text-align:center;">Osoby szczególnie zasłużone dla rozwoju i życia społecznego gminy Trzebieszów.</p>
+    
+        <div class="citizen-container">
+    
+          <div class="citizen-card">
+            <img src="konstanty.JPG" alt="Jan Kowalski">
+            <h3>Jan Kowalski</h3>
+            <p>Wieloletni działacz społeczny, zaangażowany w rozwój lokalnej kultury w regionie.</p>            <button class="toggle-btn" onclick="toggleInfo(this)">Pokaż więcej</button>
+            <div class="more-info">
+                <p>Przedsiębiorca Konstanty Strus został Honorowym Obywatelem Gminy Trzebieszów. Tytuł ten za działalność społeczną na terenie Gminy Trzebieszów, Rada Gminy nadała 31 marca. Uroczyste wręczenie Tytułu Honorowego Obywatela Gminy Trzebieszów nastąpiło 9 maja podczas uroczystej sesji Rady Gminy Trzebieszów, która odbyła się w Szaniawach Poniatach w obecności Wicewojewody Lubelskiego Roberta Gmitruczuka.</p>            </div>
+          </div>
+    
+          <div class="citizen-card">
+            <img src="img/maria_nowak.jpg" alt="Maria Nowak">
+            <h3>Maria Nowak</h3>
+            <p>Zaangażowana w życie społeczne, szczególnie na rzecz seniorów i młodzieży.</p>
+            <button class="toggle-btn" onclick="toggleInfo(this)">Pokaż więcej</button>
+            <div class="more-info">
+              <p>Pierwsza kobieta-sołtys we wsi Celiny. Organizowała wydarzenia integrujące mieszkańców oraz pozyskiwała środki unijne.</p>
+            </div>
+          </div>
+    
+        </div>
+      </main>
+    
+      <footer>
+        <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+      </footer>
+    
+      <script>
+        function toggleInfo(button) {
+          const info = button.nextElementSibling;
+          const isVisible = info.style.display === "block";
+          info.style.display = isVisible ? "none" : "block";
+          button.textContent = isVisible ? "Pokaż więcej" : "Ukryj";
+        }
+      </script>
+    
+    </body>
+    </html>

@@ -47,7 +47,7 @@ main {
 }
 
 .hero {
-    background-color: #e2e6ea;
+    background-color: #e2eae5;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -90,7 +90,7 @@ footer {
 
 
 .login-button:hover {
-    background-color: #dee2e6;
+    background-color: #dee6e0;
 }
 
 .login-container {
@@ -105,7 +105,7 @@ footer {
 
 .login-container h2 {
     margin-bottom: 20px;
-    color: #004085;
+    color: #008537;
 }
 
 .login-container form {
@@ -145,7 +145,7 @@ footer {
 }
 
 .login-container button:hover {
-    background-color: #003060;
+    background-color: #00602e;
 }
 
 main.content {
@@ -231,8 +231,8 @@ main.content {
 }
 /*do władz*/
 .official-card {
-    background-color: #f1f5fb;
-    border: 1px solid #d0dce7;
+    background-color: #f2fbf1;
+    border: 1px solid #d0e7d3;
     border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -240,20 +240,20 @@ main.content {
 }
 
 .official-card h3 {
-    color: #003366;
+    color: #014c02;
     margin-bottom: 0.5rem;
 }
 /*do struktury*/
-.accordion-button {
-    background-color: #e8f0fe;
+.accordion-button:not(.collapsed) {
+    background-color: #7caf86;
     font-weight: bold;
-    color: #003366;
+    color: #00660a;
 }
 
 .accordion-body {
     background-color: #f9f9f9;
     padding: 1rem 1.5rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid #73b57b;
 }
 
 ul {
@@ -291,7 +291,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 font-size: 1.2rem;
 font-weight: bold;
 margin-bottom: 0.5rem;
-color: #2c3e50;
+color: #2c5030;
 }
 
 /* Tekst */
@@ -303,7 +303,7 @@ color: #555;
 /* Przycisk */
 .card a.btn {
 display: inline-block;
-background-color: #0066cc;
+background-color: #06a821;
 color: #fff;
 padding: 0.5rem 1rem;
 border-radius: 6px;
@@ -313,7 +313,7 @@ transition: background-color 0.2s;
 }
 
 .card a.btn:hover {
-background-color: #004999;
+background-color: #0d7447;
 }
 /*turystyka*/
 headerjpg {
@@ -335,36 +335,37 @@ headerjpg {
 
 .produkt {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column; 
     align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
 }
-
-.produkt img.chata {
-    max-width: 300px;
+.produkt img {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
-
+  
 .produkt-text {
-    max-width: 600px;
-}
-
-.produkt-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
+    flex: 1;
+    min-width: 250px;
 }
 
 .carousel-container {
+    width: 100%;
+    max-width: 700px;
     position: relative;
-    max-width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
 }
-
-#carousel-image {
+  
+  .carousel-container img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .carousel-btn {
@@ -470,4 +471,60 @@ headerjpg {
     background-color: white;
   }
   
-  
+  /*obywatele*/
+  .citizen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .citizen-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 260px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .citizen-card:hover {
+    transform: scale(1.03);
+  }
+
+  .citizen-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .citizen-card h3 {
+    margin: 15px 10px 10px;
+    font-size: 1.2em;
+    color: #0b5d10;
+  }
+
+  .citizen-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #333;
+  }
+
+  .toggle-btn {
+    background-color: #01903b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .more-info {
+    display: none;
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: #444;
+  }
