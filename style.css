@@ -231,8 +231,8 @@ main.content {
 }
 /*do władz*/
 .official-card {
-    background-color: #f2fbf1;
-    border: 1px solid #d0e7d3;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -323,6 +323,28 @@ headerjpg {
     padding: 40px 20px;
     text-align: center;
     position: relative;
+}
+#progress-container {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(90deg, #eee, #ccc);
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+
+#progress-container:hover {
+  background: linear-gradient(90deg, #ddd, #bbb);
+}
+
+#progress-indicator {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #035515; /* ładny czerwony kolor */
+  box-shadow: 0 0 8px #0b7540;
+  border-radius: 3px;
 }
 
 /*produkty*/
@@ -447,7 +469,6 @@ headerjpg {
   
   .contact-side {
     flex: 0 0 12%;
-    background-image: url('https://img.freepik.com/premium-zdjecie/jesienny-krajobraz-lasu_102332-4218.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
