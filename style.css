@@ -528,3 +528,118 @@ headerjpg {
     font-size: 0.9em;
     color: #444;
   }
+
+ /* === GŁÓWNY NAGŁÓWEK Z GRADIENTEM === */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #0b5d10, #00a542);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  /* === TOP BAR === */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    color: white;
+    background: transparent; /* DZIEDZICZY gradient */
+  }
+  
+  /* LEWA STRONA: herb + napis */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .herb-img {
+    height: 55px;
+    width: auto;
+  }
+  
+  .subtext {
+    font-size: 0.85em;
+    line-height: 1.2;
+    margin: 0;
+    color: #e0e0e0;
+  }
+  
+  /* ŚRODEK: tytuł */
+  .header-center {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .main-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+  }
+  
+  /* PRAWA STRONA: przycisk login */
+  .header-right {
+    text-align: right;
+  }
+  
+  .login-button {
+    background-color: white;
+    color: #0b5d10;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #d5f3db;
+  }
+  
+  /* === MENU NAWIGACYJNE === */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: transparent; /* dziedziczy gradient */
+    margin: 0;
+    padding: 10px 0;
+    gap: 20px;
+  }
+  
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+  }
+  
+  /* === DROPDOWN === */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00a542;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: white;
+  }
+  
