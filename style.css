@@ -10,7 +10,6 @@ header {
     background: linear-gradient(to bottom, #0b5d10, #01903b);
     color: white;
     padding: 20px;
-    text-align: center;
 }
 
 
@@ -564,7 +563,6 @@ headerjpg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 10px 30px;
     color: white;
     background: transparent; /* DZIEDZICZY gradient */
