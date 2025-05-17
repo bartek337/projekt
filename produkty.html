@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Struktura Organizacyjna – Gmina Trzebieszów</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -57,74 +56,87 @@
 </header>
 <!-- ======= HEADER END ======= -->
 
-  <main>
-    <section>
-      <h2>Produkty lokalne pochądzące z gospodarstw znajdujących się na terenie gmniy Trzebieszów</h2>
+<main class="content">
+  <section>
+    <h2>Produkty lokalne pochodzące z gospodarstw znajdujących się na terenie gminy Trzebieszów</h2>
   </section>
-    <section class="produkty-container official-card">
-        <section class="produkt">
-            <img src="miod.jpg" alt="Słoik miodu z pasieki" class="chata">
-            <div class="produkt-text">
-                <h3>Miód z lokalnych pasiek</h3>
-                <p>
-                    Produkowany przez pszczelarzy ze wsi Celiny, miód wielokwiatowy, lipowy, rzepakowy, a także inne produkty takie jak wosk czy pierzga pszczela cieszy się dużym uznaniem dzięki swojej czystości i naturalnemu pochodzeniu.
-                </p>
-                <p>   
-                    W gospodarstwie pozyskiwany jest głównie miód do produkcji którego wykorzystywane są pożytki wiosenne, takie jak: mniszek, drzewa owocowe, krzewy oraz kwiaty polne. Ten bogaty bukiet kwiatowy gwarantuje wyjątkowy smak miodu. Dzięki gospodarce wędrownej udaje się pozyskać również inne gatunki miodu. Wędrując pasieki są rozmieszczane na terenach leśnych oraz czystych ekologicznie, to priorytet dla "Szlachetnych Miodów".
-                
-                    <a href="https://szlachetnemiody.pl/" target="_blank">Odwiedź stronę i sprawdź produkty</a>
-                </p>
-            </div>
-        </section>
 
-        <section class="produkt gallery-section">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <img id="carousel-image" src="wierzejki1.jpg" alt="Produkt 1">
-                    <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
-                <div class="produkt-text">
-                    <h3>Zakład Mięsny "Wierzejki"</h3>
-                    <p>
-                        Zakład Mięsny „Wierzejki” J.M. Zdanowscy Spółka Jawna to renomowany producent wyrobów mięsnych z siedzibą w Płudach (Gmina Trzebieszów). Założony w 1991 roku przez Jana i Marka Zdanowskich, zakład specjalizuje się w uboju, rozbiorze oraz produkcji szerokiego asortymentu mięsa i jego przetworów, takich jak wędliny i wyroby garmażeryjne .                       
-                    </p>
-                    <p>
-                        W ofercie zakładu znajdują się m.in. kiełbasa płudzka, szynka z beczki oraz boczek dymiony – produkty cenione przez konsumentów poszukujących autentycznych, regionalnych smaków.
-                    </p>
-                    <p>
-                        Dla zainteresowanych, więcej informacji oraz pełna oferta dostępne są na oficjalnej stronie internetowej zakładu:<a href="https://www.wierzejki.pl" target="_blank">Wierzejki.pl</a>
-                    </p>
-                </div>
-                
-            </section>
-        </section>
-            
-        
-        <!-- Można dodać więcej produktów w podobny sposób -->
-    </main>
+  <div>
+    <!-- MIÓD -->
+    <div>
+      <img src="miod.jpg" alt="Słoik miodu z pasieki" class="miod">
+      <div>
+        <h3>Miód z lokalnych pasiek</h3>
+        <p>
+          Produkowany przez pszczelarzy ze wsi Celiny, miód wielokwiatowy, lipowy, rzepakowy, a także inne produkty takie jak wosk czy pierzga pszczela cieszy się dużym uznaniem dzięki swojej czystości i naturalnemu pochodzeniu.
+        </p>
+        <p>
+          W gospodarstwie pozyskiwany jest głównie miód, do produkcji którego wykorzystywane są pożytki wiosenne, takie jak: mniszek, drzewa owocowe, krzewy oraz kwiaty polne. Ten bogaty bukiet kwiatowy gwarantuje wyjątkowy smak miodu. Dzięki gospodarce wędrownej udaje się pozyskać również inne gatunki miodu. Wędrujące pasieki są rozmieszczane na terenach leśnych oraz czystych ekologicznie — to priorytet dla "Szlachetnych Miodów".
+        </p>
+        <p>
+          <a href="https://szlachetnemiody.pl/" target="_blank" class="btn-nik">Odwiedź stronę i sprawdź produkty</a>
+        </p>
+      </div>
+    </div>
 
-    <script>
-        const images = [
-            "wierzejki1.jpg",
-            "wierzejki2.jpg",
-            "wierzejki3.jpg",
-            "wierzejki4.jpg",
-            "wierzejki5.jpg",
-            "wierzejki6.jpg",
-            "wierzejki7.jpg"
+    <!-- WIERZEJKI -->
+    <div>
+      <img src="wierzejki1.jpg" alt="Zakład Mięsny Wierzejki" class="miod">
+      <div>
+        <h3>Zakład Mięsny "Wierzejki"</h3>
+        <p>
+          Zakład Mięsny „Wierzejki” J.M. Zdanowscy Spółka Jawna to renomowany producent wyrobów mięsnych z siedzibą w Płudach (Gmina Trzebieszów). Założony w 1991 roku przez Jana i Marka Zdanowskich, zakład specjalizuje się w uboju, rozbiorze oraz produkcji szerokiego asortymentu mięsa i jego przetworów, takich jak wędliny i wyroby garmażeryjne.
+        </p>
+        <p>
+          W ofercie zakładu znajdują się m.in. kiełbasa płudzka, szynka z beczki oraz boczek dymiony – produkty cenione przez konsumentów poszukujących autentycznych, regionalnych smaków.
+        </p>
+        <p>
+          <a href="https://www.wierzejki.pl" target="_blank" class="btn-nik">Wierzejki.pl – strona producenta</a>
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <!--NIK-->
+  <div >
+    <img src="nik.jpg" alt="Zakład Produkcji Obuwia NIK w Dębowicy" class="miod">
+    <div>
+      <h3>Zakład Produkcji Obuwia NIK</h3>
+      <p>
+        Zakład Produkcji Obuwia NIK z siedzibą w Dębowicy to jeden z najbardziej rozpoznawalnych producentów obuwia skórzanego w regionie. Firma od wielu lat specjalizuje się w projektowaniu i wytwarzaniu obuwia o wysokiej jakości, łącząc nowoczesne wzornictwo z rzemieślniczą precyzją.
+      </p>
+      <p>
+        Produkty marki NIK cieszą się popularnością nie tylko w Polsce, ale również na rynkach zagranicznych. W ofercie zakładu znajdują się m.in. buty codzienne, trekkingowe oraz kolekcje sezonowe wykonane z najlepszych materiałów naturalnych.
+      </p>
+      <p>
+        Zakład zlokalizowany w Gminie Trzebieszów stanowi istotny element lokalnej gospodarki i dumę regionu.
+      </p>
+      <p>
+        <a href="https://nikbuty.pl" target="_blank" class="btn-nik">Odwiedź stronę producenta</a>
+      </p>
+    </div>
+  </div>
 
-        ];
-        let currentImage = 0;
-        
-        function changeSlide(direction) {
-            currentImage = (currentImage + direction + images.length) % images.length;
-            document.getElementById("carousel-image").src = images[currentImage];
-        }
-        </script>
+  <!--PIECZARKI-->
+  <div>
+    <img src="pieczarki.jpg" alt="Produkcja pieczarek w Gminie Trzebieszów" class="miod">
+    <div>
+      <h3>Produkcja pieczarek</h3>
+      <p>
+        Gmina Trzebieszów znana jest również z rozwiniętej produkcji pieczarek, która od lat stanowi ważną gałąź lokalnego rolnictwa. W wielu miejscowościach, takich jak Gołowierzchy, Karwów czy Dębowica, działają nowoczesne pieczarkarnie głownie zarządzane przez dwie rodziny: Szmuli i Kłopotków, które dostarczają świeże pieczarki zarówno na rynek krajowy, jak i zagraniczny.
+      </p>
+      <p>
+        Dzięki korzystnym warunkom klimatycznym, dostępowi do dobrej jakości surowców oraz doświadczeniu lokalnych producentów, pieczarki z Gminy Trzebieszów cieszą się renomą i zaufaniem odbiorców. Są one regularnie dostarczane do sieci handlowych oraz eksportowane m.in. do Niemiec, Holandii i krajów skandynawskich.
+      </p>
+      <p>
+        Uprawa pieczarek w regionie to przykład dynamicznie rozwijającej się specjalizacji rolniczej, która daje zatrudnienie wielu mieszkańcom i wzmacnia gospodarczy potencjał gminy.
+      </p>
+    </div>
+  </div>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
-    </footer>
+<footer>
+  <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+</footer>
 </body>
 </html>

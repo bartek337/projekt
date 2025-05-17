@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Publikacje o Gminie Trzebieszów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ======= HEADER START ======= -->
+  <header class="gmina-header">
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+  
+      <div class="gmina-center">
+        <h1 class="gmina-title">GMINA TRZEBIESZÓW</h1>
+      </div>
+  
+      <div class="gmina-right">
+        <a href="login.html" class="login-btn">Zaloguj się</a>
+      </div>
+    </div>
+
+  <!-- MENU -->
+  <nav>
+    <ul class="gmina-menu">
+      <li><a href="index.html">Strona główna</a></li>
+
+      <li class="dropdown">
+        <a href="#">Informacje o Gminie</a>
+        <ul class="dropdown-content">
+          <li><a href="historia.html">Historia gminy</a></li>
+          <li><a href="barwy.html">Herb gminy</a></li>
+          <li><a href="wladze.html">Władze Gminy</a></li>
+          <li><a href="struktura.html">Struktura Organizacyjna</a></li>
+          <li><a href="solectwa.html">Sołectwa</a></li>
+          <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
+          <li><a href="produkty.html">Produkty Lokalne</a></li>
+          <li><a href="obywatele.html">Honorowi Obywatele</a></li>
+          <li><a href="publikacje.html">Publikacje o gminie</a></li>
+          <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
+          <li><a href="partnerstwo.html">Partnerstwo i współpraca</a></li>
+        </ul>
+      </li>
+
+      <li><a href="panel.html">Panel Mieszkańca</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- ======= HEADER END ======= -->
+
+<main class="content official-card">
+    <h2>Publikacje o Gminie Trzebieszów</h2>
+    <p>Prezentujemy wybrane publikacje dotyczące historii, kultury oraz dziedzictwa Gminy Trzebieszów.</p>
+  
+    <section class="highlight">
+        <img src="600lat.jpg" alt="Bitwa pod Trzebieszowem" class="chata">
+
+      <h3>„600 lat Trzebieszowa” – Monografia historyczna</h3>
+      <p>Wydana z okazji jubileuszu, publikacja zawiera bogaty opis dziejów gminy, sylwetki zasłużonych mieszkańców oraz archiwalne fotografie.</p>
+      <a href="600latobchody.pdf" class="btn-nik">Pobierz PDF</a>
+    </section>
+  
+    <div class="filters">
+        <button class="active" onclick="filterPub('all')">Wszystkie</button>
+        <button onclick="filterPub('historia')">Historia</button>
+        <button onclick="filterPub('dokument')">Dokumenty</button>
+        <button onclick="filterPub('planowanie')">Planowanie</button>
+    </div>
+  
+    <div class="pub-card historia">
+        <h4>„Z dziejów parafii i Gminy Trzebieszów” – Józef Geresz</h4>
+        <p>Monografia przedstawiająca historię parafii i gminy Trzebieszów, wydana w 2000 roku.</p>
+        <a href="https://www.wajszczuk.pl/spotkania/trzebieszow/historia.htm" class="btn-nik" target="_blank">Zobacz więcej</a>
+      </div>
+  
+      <div class="pub-card historia">
+        <img src="bitwak.jpg" alt="Bitwa pod Trzebieszowem">
+        <h4>Walki z bolszewikami w Karwowie i Dębowicy</h4>
+        <p>Artykuł historyczny o wydarzeniach z 1920 roku.</p>
+        <button class="btn-nik" onclick="openGallery()">Zobacz</button>
+      </div>
+  
+      <div class="pub-card historia">
+        <h4>„Dzieje parafii Trzebieszów i jej mieszkańców w latach 1430–1860” – Jan Rzewuski</h4>
+        <p>Publikacja opisująca dzieje parafii oraz mieszkańców Trzebieszowa od XV do XIX wieku.</p>
+        <a href="https://lubimyczytac.pl/ksiazka/4939059/dzieje-parafii-trzebieszow-i-jej-mieszkancow-w-latach-1430-1860" class="btn-nik" target="_blank">Zobacz więcej</a>
+      </div>
+      
+      <div class="pub-card historia">
+        <h4>„Parafia rzymskokatolicka i dobra ziemskie w Trzebieszowie (1790–1939)” – Jan Rzewuski</h4>
+        <p>Analiza historii parafii i majątków ziemskich w regionie w okresie zaborów i międzywojnia.</p>
+        <a href="https://lubimyczytac.pl/ksiazka/5108908/parafia-rzymskokatolicka-i-dobra-ziemskie-w-trzebieszowie-w-latach-1790-1939" class="btn-nik" target="_blank">Zobacz więcej</a>
+      </div>
+      
+      <div class="pub-card dokument">
+        <h4>Raport o stanie Gminy Trzebieszów za 2022 rok</h4>
+        <p>Oficjalny dokument zawierający dane o inwestycjach, demografii i gospodarce gminy.</p>
+        <a href="https://ugtrzebieszow.bip.lubelskie.pl/upload/pliki/raport-o-stanie-gminy-2022-final.pdf" class="btn-nik" target="_blank">Pobierz PDF</a>
+      </div>
+      
+      <div class="pub-card planowanie">
+        <h4>Wirtualny spacer po Gminie Trzebieszów</h4>
+        <p>Przejdź się po gminie bez wychodzenia z domu.</p>
+        <a href="https://zwiedzajkraj.pl/lgdrazem/gminatrzebieszow" class="btn-nik" target="_blank">Zobacz więcej</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+  </footer>
+  
+  <script src="publikacje.js"></script>
+
+  <div id="galleryModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeGallery()">✖</span>
+      <img src="bitwak1.jpg" alt="Strona 1">
+      <img src="bitwak2.jpg" alt="Strona 2">
+    </div>
+  </div>
+  </body>
+  </html>
