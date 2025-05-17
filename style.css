@@ -148,7 +148,7 @@ footer {
 }
 
 main.content {
-    padding: 40px;
+    padding: 140px;
     background-color: #ffffff;
     margin: 30px auto;
     width: 80%;
@@ -455,6 +455,7 @@ headerjpg {
   
   
   .contact-layout {
+    padding-top: 180px;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -550,7 +551,7 @@ headerjpg {
   }
 
   .sticky-header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     background: linear-gradient(to bottom, #0b5d10, #00a542);
@@ -753,4 +754,143 @@ headerjpg {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.herb-img {
+  height: 55px !important;
+  width: auto !important;
+  display: block;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gmina-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to bottom, #0b5d10, #00a542);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Pasek główny */
+.gmina-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 8px 20px;
+  color: white;
+}
+
+
+.gmina-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 0.85em;
+  color: #e0e0e0;
+  line-height: 1.2;
+}
+
+.gmina-center {
+  flex: 1;
+  text-align: center;
+}
+
+.gmina-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+
+.gmina-right {
+  flex-shrink: 0;
+}
+
+.login-btn {
+  background-color: white;
+  color: #0b5d10;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.login-btn:hover {
+  background-color: #d5f3db;
+}
+
+/* Menu */
+.gmina-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #0b5d10, #00a542);
+  padding: 10px 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.gmina-menu li {
+  position: relative;
+}
+
+.gmina-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.gmina-menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0b5d10;
+  padding: 0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list li a {
+  padding: 10px;
+  display: block;
+}
+
+/* Ważne: Odstęp na treść, żeby header nic nie zasłaniał */
+main, .content, .page-content {
+  padding-top: 130px; /* dostosuj do wysokości headera + menu */
 }
