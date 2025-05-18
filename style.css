@@ -326,13 +326,16 @@ transition: background-color 0.2s;
 background-color: #0d7447;
 }
 /*turystyka*/
-headerjpg {
-    background: url('header-bcg.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
+.tur-header {
+  background: url('header-bcg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 60px 10px;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
 }
 #progress-container {
   position: relative;
@@ -1055,4 +1058,72 @@ main h2 {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
+}
+/*ORGANIZACJE*/
+  .description {
+    margin-bottom: 30px;
+    color: #444;
+    font-size: 1.1rem;
+  }
+
+  table#orgTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+  }
+
+  #orgTable th {
+    background-color: #0b5d10;
+    color: white;
+    text-align: left;
+    padding: 12px;
+  }
+
+  #orgTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  #orgTable tr:hover {
+    background-color: #f7fff9;
+  }
+
+  .dataTables_wrapper {
+    margin-top: 20px;
+  }
+
+  .dataTables_filter input,
+  .dataTables_length select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+
+  .dataTables_paginate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.dataTables_paginate .paginate_button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #c8e6c9;
+  background-color: #e8f5e9;
+  color: #2e7d32 !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dataTables_paginate .paginate_button:hover {
+  background-color: #c8e6c9;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background-color: #388e3c !important;
+  color: white !important;
+  border: 1px solid #2e7d32;
 }
