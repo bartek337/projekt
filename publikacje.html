@@ -59,58 +59,78 @@
     <h2>Publikacje o Gminie Trzebieszów</h2>
     <p>Prezentujemy wybrane publikacje dotyczące historii, kultury oraz dziedzictwa Gminy Trzebieszów.</p>
   
-    <section class="highlight">
-        <img src="600lat.jpg" alt="Bitwa pod Trzebieszowem" class="chata">
-
-      <h3>„600 lat Trzebieszowa” – Monografia historyczna</h3>
-      <p>Wydana z okazji jubileuszu, publikacja zawiera bogaty opis dziejów gminy, sylwetki zasłużonych mieszkańców oraz archiwalne fotografie.</p>
-      <a href="600latobchody.pdf" class="btn-nik">Pobierz PDF</a>
-    </section>
-  
+    <div class="filter-wrapper">
+    <p class="filter-info">Wybierz kategorię, aby przefiltrować publikacje:</p>
     <div class="filters">
-        <button class="active" onclick="filterPub('all')">Wszystkie</button>
-        <button onclick="filterPub('historia')">Historia</button>
-        <button onclick="filterPub('dokument')">Dokumenty</button>
-        <button onclick="filterPub('planowanie')">Planowanie</button>
+      <button class="active" onclick="filterPub('all')">Wszystkie</button>
+      <button onclick="filterPub('historia')">Historia</button>
+      <button onclick="filterPub('dokument')">Dokumenty</button>
+      <button onclick="filterPub('planowanie')">Planowanie</button>
     </div>
-  
-    <div class="pub-card historia">
-        <h4>„Z dziejów parafii i Gminy Trzebieszów” – Józef Geresz</h4>
-        <p>Monografia przedstawiająca historię parafii i gminy Trzebieszów, wydana w 2000 roku.</p>
-        <a href="https://www.wajszczuk.pl/spotkania/trzebieszow/historia.htm" class="btn-nik" target="_blank">Zobacz więcej</a>
+  </div>
+      <div class="pub-card-historia pub-with-image">
+        <img src="600lat.jpg" alt="Okładka monografii 600-lecia">
+        <div class="pub-text">
+          <h3>„600 lat Trzebieszowa” – Monografia historyczna</h3>
+          <p>Publikacja została przygotowana jako relacja z obchodów 600-lecia Trzebieszowa. Zawiera opis najważniejszych wydarzeń jubileuszowych, uroczystości, osób wyróżnionych oraz pamiątkowych inicjatyw towarzyszących tej wyjątkowej rocznicy.</p>
+          <a href="https://www.canva.com/design/DAGnvgouQj0/P-_syGSlVgO1B6OoBY0XWA/view?utm_content=DAGnvgouQj0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd1ee1f557f" class="btn-nik" target="_blank">Zobacz więcej</a>
+        </div>
       </div>
-  
-      <div class="pub-card historia">
+
+      <div class="pub-card historia pub-with-image">
+        <img src="spotkanie.jpg" alt="Okładka Z dziejów parafii">
+        <div class="pub-text">
+          <h4>„Z dziejów parafii i Gminy Trzebieszów” – Józef Geresz</h4>
+          <p>Monografia przedstawiająca historię parafii i gminy Trzebieszów, wydana w 2000 roku.</p>
+          <a href="https://www.wajszczuk.pl/spotkania/trzebieszow/historia.htm" class="btn-nik" target="_blank">Zobacz więcej</a>
+        </div>
+      </div>
+      
+      <div class="pub-card historia pub-with-image">
         <img src="bitwak.jpg" alt="Bitwa pod Trzebieszowem">
-        <h4>Walki z bolszewikami w Karwowie i Dębowicy</h4>
-        <p>Artykuł historyczny o wydarzeniach z 1920 roku.</p>
-        <button class="btn-nik" onclick="openGallery()">Zobacz</button>
+        <div class="pub-text">
+            <h4>Walki z bolszewikami w Karwowie i Dębowicy</h4>
+            <p>Artykuł historyczny o wydarzeniach z 1920 roku dotyczący przemarszu Szlaku Dywizji Górskiej Gen. Bryg. Andrzeja Galicy</p>
+            <button class="btn-nik" onclick="openGallery()">Zobacz</button>
+        </div>
       </div>
   
-      <div class="pub-card historia">
-        <h4>„Dzieje parafii Trzebieszów i jej mieszkańców w latach 1430–1860” – Jan Rzewuski</h4>
-        <p>Publikacja opisująca dzieje parafii oraz mieszkańców Trzebieszowa od XV do XIX wieku.</p>
-        <a href="https://lubimyczytac.pl/ksiazka/4939059/dzieje-parafii-trzebieszow-i-jej-mieszkancow-w-latach-1430-1860" class="btn-nik" target="_blank">Zobacz więcej</a>
+      <div class="pub-card historia pub-with-image">
+        <img src="zdziejow.jpg" alt="Okładka Z dziejów parafii">
+        <div class="pub-text">
+          <h4>„Dzieje parafii Trzebieszów i jej mieszkańców w latach 1430–1860” – Jan Rzewuski</h4>
+          <p>Publikacja opisująca dzieje parafii oraz mieszkańców Trzebieszowa od XV do XIX wieku.</p>
+          <a href="https://lubimyczytac.pl/ksiazka/4939059/dzieje-parafii-trzebieszow-i-jej-mieszkancow-w-latach-1430-1860" class="btn-nik" target="_blank">Zobacz więcej</a>
+        </div>
       </div>
       
-      <div class="pub-card historia">
-        <h4>„Parafia rzymskokatolicka i dobra ziemskie w Trzebieszowie (1790–1939)” – Jan Rzewuski</h4>
-        <p>Analiza historii parafii i majątków ziemskich w regionie w okresie zaborów i międzywojnia.</p>
-        <a href="https://lubimyczytac.pl/ksiazka/5108908/parafia-rzymskokatolicka-i-dobra-ziemskie-w-trzebieszowie-w-latach-1790-1939" class="btn-nik" target="_blank">Zobacz więcej</a>
+      <div class="pub-card historia pub-with-image">
+        <img src="dzieje.jpg" alt="Okładka">
+        <div class="pub-text">
+          <h4>„Parafia rzymskokatolicka i dobra ziemskie w Trzebieszowie (1790–1939)” – Jan Rzewuski</h4>
+          <p>Analiza historii parafii i majątków ziemskich w regionie w okresie zaborów i międzywojnia.</p>
+          <a href="https://lubimyczytac.pl/ksiazka/5108908/parafia-rzymskokatolicka-i-dobra-ziemskie-w-trzebieszowie-w-latach-1790-1939" class="btn-nik" target="_blank">Zobacz więcej</a>
+        </div>
       </div>
       
-      <div class="pub-card dokument">
-        <h4>Raport o stanie Gminy Trzebieszów za 2022 rok</h4>
-        <p>Oficjalny dokument zawierający dane o inwestycjach, demografii i gospodarce gminy.</p>
-        <a href="https://ugtrzebieszow.bip.lubelskie.pl/upload/pliki/raport-o-stanie-gminy-2022-final.pdf" class="btn-nik" target="_blank">Pobierz PDF</a>
+      <div class="pub-card dokument pub-with-image">
+        <img src="raport.jpg" alt="Okładka">
+        <div class="pub-text">
+          <h4>Raport o stanie Gminy Trzebieszów za 2022 rok</h4>
+          <p>Oficjalny dokument zawierający dane o inwestycjach, demografii i gospodarce gminy.</p>
+          <a href="https://ugtrzebieszow.bip.lubelskie.pl/upload/pliki/raport-o-stanie-gminy-2022-final.pdf" class="btn-nik" target="_blank">Pobierz PDF</a>
+        </div>
       </div>
       
-      <div class="pub-card planowanie">
-        <h4>Wirtualny spacer po Gminie Trzebieszów</h4>
-        <p>Przejdź się po gminie bez wychodzenia z domu.</p>
-        <a href="https://zwiedzajkraj.pl/lgdrazem/gminatrzebieszow" class="btn-nik" target="_blank">Zobacz więcej</a>
+      <div class="pub-card planowanie pub-with-image">
+        <img src="spacer.jpg" alt="Okładka">
+        <div class="pub-text">
+          <h4>Wirtualny spacer po Gminie Trzebieszów</h4>
+          <p>Przejdź się po gminie bez wychodzenia z domu.</p>
+          <a href="https://zwiedzajkraj.pl/lgdrazem/gminatrzebieszow" class="btn-nik" target="_blank">Zobacz więcej</a>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
   
   <footer>

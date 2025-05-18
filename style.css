@@ -872,10 +872,11 @@ main h2 {
   display: inline-block;
   background-color: #017e3a;
   color: #fff;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 4px 12px; /* zmniejszone paddingi */
+  font-size: 0.95rem; /* mniejszy tekst */
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
@@ -883,12 +884,24 @@ main h2 {
   background-color: #025c2b;
 }
 /*PUBLIKACJE*/
+.filter-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.filter-info {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
 .filters {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 0 30px;
 }
+
 .filters button {
   background-color: #0b5d10;
   color: white;
@@ -899,6 +912,7 @@ main h2 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .filters button:hover,
 .filters button.active {
   background-color: #00a542;
@@ -949,4 +963,50 @@ main h2 {
   font-size: 24px;
   cursor: pointer;
   color: #333;
+}
+.pub-with-image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* <-- to sprawia, że obrazek wypośrodkuje się względem tekstu */
+  gap: 20px;
+  max-width: 900px;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+}
+.pub-with-image img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.pub-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.pub-text h3 {
+  margin-top: 0;
+  color: #0b5d10;
+}
+.pub-card {
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.pub-card.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+.pub-card.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
