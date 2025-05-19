@@ -1127,3 +1127,63 @@ main h2 {
   color: white !important;
   border: 1px solid #2e7d32;
 }
+
+.carousel-section {
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.carousel-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.carousel-description {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.95rem;
+}
+
+.carousel-image-container:hover .carousel-caption {
+  transform: translateY(-20%);
+}
+
+.carousel-image-container:hover .carousel-description {
+  opacity: 1;
+}
+
+.updates {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.updates:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-preview h5 {
+  margin-bottom: 0.3rem;
+}
+
+.event-preview p {
+  color: #444;
+}
+
+.aktualnosci-ramka {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+}
