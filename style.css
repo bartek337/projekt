@@ -422,7 +422,7 @@ background-color: #0d7447;
 
 /* skibidi */ 
   .contact-layout {
-    padding-top: 180px;
+
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -875,7 +875,7 @@ background-color: #0d7447;
 
 /* Ważne: Odstęp na treść, żeby header nic nie zasłaniał */
 main, .content, .page-content {
-  padding-top: 130px; /* dostosuj do wysokości headera + menu */
+  padding-top: 180px; /* dostosuj do wysokości headera + menu */
 }
 
 .contact-columns {
