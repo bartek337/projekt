@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civica – Panel Mieszkańca</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civica – Panel Mieszkańca</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- ======= HEADER START ======= -->
     <header class="gmina-header">
       <div class="gmina-bar">
         <div class="gmina-left">
-          <a href="index.html">
+          <a href = "index.html">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
           </a>  
           <div class="logo-text">
@@ -25,121 +25,93 @@
         </div>
     
         <div class="gmina-right">
-          <a href="login.html" class="login-btn">Zaloguj się</a>
+          <button onclick="logout()" class="login-btn">Wyloguj się</button>
         </div>
       </div>
   
-      <!-- MENU -->
-      <nav>
-        <ul class="gmina-menu">
-          <li><a href="index.html">Strona główna</a></li>
-          <li class="dropdown">
-            <a href="#">Informacje o Gminie</a>
-            <ul class="dropdown-content">
-              <li><a href="historia.html">Historia gminy</a></li>
-              <li><a href="barwy.html">Herb gminy</a></li>
-              <li><a href="wladze.html">Władze Gminy</a></li>
-              <li><a href="struktura.html">Struktura Organizacyjna</a></li>
-              <li><a href="solectwa.html">Sołectwa</a></li>
-              <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
-              <li><a href="produkty.html">Produkty Lokalne</a></li>
-              <li><a href="obywatele.html">Honorowi Obywatele</a></li>
-              <li><a href="publikacje.html">Publikacje o gminie</a></li>
-              <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
-              <li><a href="partnerstwo.html">Jednostki organizacyjne</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-  <a href="#">Panel Mieszkańca</a>
-  <ul class="dropdown-content">
-    <li><a href="zgloszenia.html">Zgłoszenia</a></li>
-    <li><a href="moje_zgloszenia.html">Moje Zgłoszenia</a></li>
-    <li><a href="ankiety.html">Ankiety</a></li>
-    <li><a href="zameldowanie.html">Zameldowanie</a></li>
-    <li><a href="oplaty.html">Opłaty</a></li>
-  </ul>
-</li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+    <!-- MENU -->
+    <nav>
+      <ul class="gmina-menu">
+        <li><a href="index.html">Strona główna</a></li>
+  
+        <li class="dropdown">
+          <a href="#">Informacje o Gminie</a>
+          <ul class="dropdown-content">
+            <li><a href="historia.html">Historia gminy</a></li>
+            <li><a href="barwy.html">Herb gminy</a></li>
+            <li><a href="wladze.html">Władze Gminy</a></li>
+            <li><a href="struktura.html">Struktura Organizacyjna</a></li>
+            <li><a href="solectwa.html">Sołectwa</a></li>
+            <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
+            <li><a href="produkty.html">Produkty Lokalne</a></li>
+            <li><a href="obywatele.html">Honorowi Obywatele</a></li>
+            <li><a href="publikacje.html">Publikacje o gminie</a></li>
+            <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
+            <li><a href="partnerstwo.html">Jednostki organizacyjne</a></li>
+          </ul>
+        </li>
+  
+         <li class="dropdown">
+        <a href="panel.html">Panel Mieszkańca</a>
+        <ul class="dropdown-content">
+          <li><a href="zgloszenia.html">Zgłoszenia</a></li>
+          <li><a href="moje_zgloszenia.html">Moje Zgłoszenia</a></li>
+          <li><a href="ankiety.html">Ankiety</a></li>
+          <li><a href="zameldowanie.html">Zameldowanie</a></li>
+          <li><a href="oplaty.html">Opłaty</a></li>
         </ul>
-      </nav>
-    </header>
-    <!-- ======= HEADER END ======= -->
+      </li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+      </header>
+<!-- ======= HEADER END ======= -->
 
-    <main>
-      <section class="hero">
-        <h2>Panel mieszkańca</h2>
-        <p>Witamy w panelu, w którym możesz zgłaszać sprawy do urzędu i śledzić ich status.</p>
-      </section>
+<main>
+  <section class="hero">
+    <h2>Panel mieszkańca</h2>
+    <p>Witamy, <span id="loggedUserDisplay"></span>! Możesz zgłaszać sprawy do urzędu i śledzić ich status.</p>
+  </section>
 
-      <section class="form-section">
-        <h3>Zgłoś sprawę</h3>
-        <form id="issueForm">
-          <label for="name">Imię i nazwisko:</label>
-          <input type="text" id="name" name="name" required>
+  <section class="form-section">
+    <h3>Zgłoś sprawę</h3>
+    <form id="issueForm">
+      <label for="category">Kategoria sprawy:</label>
+      <select id="category" required>
+        <option value="">-- Wybierz kategorię --</option>
+        <option value="Drogi">Drogi</option>
+        <option value="Śmieci">Gospodarka odpadami</option>
+        <option value="Oświetlenie">Oświetlenie uliczne</option>
+        <option value="Inne">Inne</option>
+      </select>
 
-          <label for="email">Adres e-mail:</label>
-          <input type="email" id="email" name="email" required>
+      <label for="description">Opis sprawy:</label>
+      <textarea id="description" rows="4" required></textarea>
 
-          <label for="category">Kategoria sprawy:</label>
-          <select id="category" name="category" required>
-            <option value="">-- Wybierz kategorię --</option>
-            <option value="Drogi">Drogi</option>
-            <option value="Śmieci">Gospodarka odpadami</option>
-            <option value="Oświetlenie">Oświetlenie uliczne</option>
-            <option value="Inne">Inne</option>
-          </select>
+      <button type="submit">Wyślij zgłoszenie</button>
+    </form>
+  </section>
 
-          <label for="description">Opis sprawy:</label>
-          <textarea id="description" name="description" rows="4" required></textarea>
+  <section class="updates">
+    <h3>Twoje zgłoszenia</h3>
+    <table id="issuesTable">
+      <thead>
+        <tr>
+          <th>Kategoria</th>
+          <th>Opis</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
 
-          <button type="submit">Wyślij zgłoszenie</button>
-        </form>
-      </section>
+<footer>
+  <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+</footer>
 
-      <section class="updates">
-        <h3>Twoje zgłoszenia</h3>
-        <table id="issuesTable">
-          <thead>
-            <tr>
-              <th>Imię i nazwisko</th>
-              <th>Kategoria</th>
-              <th>Opis</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Wiersze będą dodawane dynamicznie -->
-          </tbody>
-        </table>
-      </section>
-    </main>
+<script src="panel.js"></script>
 
-    <footer>
-        <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
-    </footer>
-
-    <script>
-      const form = document.getElementById('issueForm');
-      const tableBody = document.querySelector('#issuesTable tbody');
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = form.name.value;
-        const category = form.category.value;
-        const description = form.description.value;
-
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${name}</td>
-          <td>${category}</td>
-          <td>${description}</td>
-          <td>Oczekuje</td>
-        `;
-        tableBody.appendChild(row);
-
-        form.reset();
-      });
-    </script>
 </body>
 </html>

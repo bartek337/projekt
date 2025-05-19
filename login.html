@@ -71,23 +71,25 @@
 
     <main>
         <div class="login-container">
-            <h2>Logowanie</h2>
-            <form>
-                <label for="username">Login</label>
-                <input type="text" id="username" name="username" required>
+          <h2>Logowanie</h2>
+          <form onsubmit="return loginUser(event)">
+            <label for="username">Login</label>
+            <input type="text" id="username" name="username" required>
 
-                <label for="password">Hasło</label>
-                <input type="password" id="password" name="password" required>
+            <label for="password">Hasło</label>
+            <input type="password" id="password" name="password" required>
 
-                <a href="#" class="forgot-password">Zapomniałeś hasła?</a>
+            <a href="#" class="forgot-password">Zapomniałeś hasła?</a>
 
-                <button type="submit">Zaloguj się</button>
-            </form>
+            <button type="submit">Zaloguj się</button>
+          </form>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
     </footer>
+<script src="login.js"></script>
+
 </body>
 </html>

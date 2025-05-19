@@ -103,36 +103,24 @@
     </nav>
   </header>
 
-  <main>
-    <section class="content-section">
-      <h2>Moje zgłoszenia</h2>
-      <p>Poniżej znajduje się lista Twoich dotychczasowych zgłoszeń.</p>
+  <main class="content official-card">
+  <h2>Moje zgłoszenia</h2>
+  <p>Poniżej znajduje się lista Twoich dotychczasowych zgłoszeń.</p>
+  <div id="zgloszenia-lista"></div>
+</main>
 
-      <div class="zgloszenie-box">
-        <h4>Stan drogi – ul. Leśna</h4>
-        <p><strong>Data:</strong> 12.05.2025</p>
-        <p><strong>Opis:</strong> Występują liczne dziury w nawierzchni, utrudniające ruch.</p>
-        <p class="status oczekuje">Status: Oczekuje na rozpatrzenie</p>
-      </div>
+<footer>
+  <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+</footer>
 
-      <div class="zgloszenie-box">
-        <h4>Brak oświetlenia – ul. Polna</h4>
-        <p><strong>Data:</strong> 01.05.2025</p>
-        <p><strong>Opis:</strong> Od dwóch tygodni nie działa latarnia przed posesją 12.</p>
-        <p class="status przyjete">Status: Przyjęte do realizacji</p>
-      </div>
-
-      <div class="zgloszenie-box">
-        <h4>Propozycja budowy placu zabaw – ul. Kwiatowa</h4>
-        <p><strong>Data:</strong> 25.04.2025</p>
-        <p><strong>Opis:</strong> Mieszkańcy proszą o rozważenie budowy placu zabaw dla dzieci.</p>
-        <p class="status rozpatrzone">Status: Rozpatrzone – brak środków w budżecie</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
-  </footer>
+<script>
+  const loggedUser = localStorage.getItem("loggedUser");
+  if (!loggedUser) {
+    alert("Nie jesteś zalogowany. Przekierowanie do logowania...");
+    window.location.href = "login.html";
+  }
+</script>
+<script src="zgloszenia.js"></script>
 </body>
 </html>
+
