@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Opłaty – Panel Administratora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="gmina-header">
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">Panel Administratora</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="content official-card">
+    <h2>💰 Opłaty i rachunki</h2>
+    <p>Wysyłaj rachunki mieszkańcom i monitoruj ich status.</p>
+
+    <div class="admin-payment-grid">
+      <form id="paymentForm">
+        <h3>➕ Nowy rachunek</h3>
+
+        <label for="login">👤 Wybierz mieszkańca (login):</label>
+        <select id="login" required>
+          <option value="">-- wybierz --</option>
+        </select>
+
+        <label for="amount">💵 Kwota (PLN):</label>
+        <input type="number" id="amount" min="0" required>
+
+        <label for="desc">📝 Opis:</label>
+        <textarea id="desc" rows="3" required></textarea>
+
+        <button type="submit" class="btn-nik">Wyślij rachunek</button>
+      </form>
+
+      <div class="admin-payment-list">
+        <h3>📄 Wysłane rachunki</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Login</th>
+              <th>Kwota</th>
+              <th>Opis</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="paymentTable">
+            <!-- Rachunki pojawią się tu dynamicznie -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+  </footer>
+
+  <script src="oplaty_admin.js"></script>
+  
+</body>
+</html>
