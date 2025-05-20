@@ -1,4 +1,3 @@
-<!-- zgloszenia.html -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,7 +6,7 @@
   <title>Zgłoszenia | Panel Mieszkańca</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="zgloszenia-page">
   <header class="gmina-header">
     <div class="gmina-bar">
       <div class="gmina-left">
@@ -62,25 +61,35 @@
   </header>
 
   <main>
-    <section class="content-section">
-      <h2>Zgłoszenia</h2>
-      <p>Możesz zgłosić problem techniczny, propozycję inwestycji lub inne sprawy dotyczące gminy.</p>
-      <form class="form-panel">
-        <label for="kategoria">Kategoria:</label>
-        <select id="kategoria" name="kategoria">
-          <option value="drogi">Stan dróg</option>
-          <option value="oswietlenie">Oświetlenie</option>
-          <option value="inwestycje">Inwestycje</option>
-          <option value="inne">Inne</option>
+    <section class="form-section">
+      <h2>Wyślij zgłoszenie</h2>
+      <p class="lead-text">Służymy pomocą w sprawach technicznych i nie tylko!<br>Wyślij zgłoszenie, a my się z Tobą skontaktujemy.</p>
+
+      <form id="reportForm" enctype="multipart/form-data">
+        <label for="type">1. Wybierz typ zgłoszenia</label>
+        <select id="type" name="type" required>
+          <option value="">-</option>
+          <option value="infrastructure">Awarie infrastruktury</option>
+          <option value="waste">Dzikie wysypisko</option>
+          <option value="signage">Uszkodzony znak</option>
+          <option value="other">Inna sprawa</option>
         </select>
 
-        <label for="opis">Opis zgłoszenia:</label>
-        <textarea id="opis" name="opis" rows="6" placeholder="Opisz zgłoszenie..." required></textarea>
+        <div id="additionalFields" style="display:none">
+          <label for="location">Lokalizacja (ulica, nr, miejscowość)</label>
+          <input type="text" id="location" name="location" required>
 
-        <label for="zalacznik">Załącznik (opcjonalnie):</label>
-        <input type="file" id="zalacznik" name="zalacznik">
+          <label for="subject">Temat</label>
+          <input type="text" id="subject" name="subject" required>
 
-        <button type="submit">Wyślij zgłoszenie</button>
+          <label for="description">Opis zgłoszenia</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+
+          <label for="fileUpload">Dodaj załącznik </label>
+          <input type="file" id="fileUpload" name="attachment" accept="image/*,application/pdf">
+
+          <button type="submit">Wyślij</button>
+        </div>
       </form>
     </section>
   </main>
@@ -88,5 +97,20 @@
   <footer>
     <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const typeSelect = document.getElementById("type");
+      const additionalFields = document.getElementById("additionalFields");
+
+      typeSelect.addEventListener("change", function () {
+        if (typeSelect.value) {
+          additionalFields.style.display = "block";
+        } else {
+          additionalFields.style.display = "none";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
