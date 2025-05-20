@@ -7,15 +7,39 @@
 </head>
 <body>
   <header class="gmina-header">
-    <h1>Komunikaty i pisma</h1>
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">Panel Administratora</h1>
+      </div>
+    </div>
   </header>
-  <main class="content official-card">
-    <p>Stwórz nowy komunikat urzędowy dla mieszkańców.</p>
-    <form>
-      <label>Tytuł: <input type="text"></label><br>
-      <label>Treść: <textarea rows="5"></textarea></label><br>
-      <button type="submit">Opublikuj</button>
-    </form>
+
+  <main>
+    <div class="admin-back">
+      <a href="admin-panel.html" class="btn-nik">⬅ Powrót do panelu głównego</a>
+    </div>
+
+    <section class="admin-message-box">
+      <p>Stwórz nowy komunikat urzędowy dla mieszkańców.</p>
+      <form>
+        <label for="tytul">Tytuł:</label>
+        <input type="text" id="tytul" required>
+
+        <label for="tresc">Treść:</label>
+        <textarea id="tresc" rows="5" required></textarea>
+
+        <button type="submit" class="btn-nik">Opublikuj</button>
+      </form>
+    </section>
   </main>
 </body>
 </html>

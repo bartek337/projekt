@@ -23,28 +23,33 @@
       </div>
     </div>
   </header>
-
-  <main class="content official-card">
+  <main>
+    <div class="admin-back">
+      <a href="admin-panel.html" class="btn-nik">⬅ Powrót do panelu głównego</a>
+    </div>
     <h2>💰 Opłaty i rachunki</h2>
     <p>Wysyłaj rachunki mieszkańcom i monitoruj ich status.</p>
-
+    
     <div class="admin-payment-grid">
-      <form id="paymentForm">
-        <h3>➕ Nowy rachunek</h3>
 
-        <label for="login">👤 Wybierz mieszkańca (login):</label>
-        <select id="login" required>
-          <option value="">-- wybierz --</option>
-        </select>
+      <div class="payment-box">
+        <form id="paymentForm">
+          <h3>➕ Nowy rachunek</h3>
 
-        <label for="amount">💵 Kwota (PLN):</label>
-        <input type="number" id="amount" min="0" required>
+          <label for="userLogin">Wybierz mieszkańca (login):</label>
+          <select id="userLogin" required>
+            <option value="">-- wybierz --</option>
+          </select>
 
-        <label for="desc">📝 Opis:</label>
-        <textarea id="desc" rows="3" required></textarea>
+          <label for="amount">Kwota (PLN):</label>
+          <input type="number" id="amount" min="0" required />
 
-        <button type="submit" class="btn-nik">Wyślij rachunek</button>
-      </form>
+          <label for="desc">Opis:</label>
+          <textarea id="desc" rows="3" required></textarea>
+
+          <button type="submit" class="btn-nik">Wyślij rachunek</button>
+        </form>
+      </div>
 
       <div class="admin-payment-list">
         <h3>📄 Wysłane rachunki</h3>
@@ -58,10 +63,11 @@
             </tr>
           </thead>
           <tbody id="paymentTable">
-            <!-- Rachunki pojawią się tu dynamicznie -->
+            <!-- Wiersze będą wypełniane przez JS -->
           </tbody>
         </table>
       </div>
+
     </div>
   </main>
 
@@ -70,6 +76,5 @@
   </footer>
 
   <script src="oplaty_admin.js"></script>
-  
 </body>
 </html>

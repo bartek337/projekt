@@ -7,15 +7,87 @@
 </head>
 <body>
   <header class="gmina-header">
-    <h1>Raportowanie i analizy</h1>
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">Panel Administratora</h1>
+      </div>
+    </div>
   </header>
-  <main class="content official-card">
-    <p>Wyświetl dane i statystyki zgłoszeń i aktywności mieszkańców.</p>
-    <ul>
-      <li>📊 Liczba zgłoszonych wniosków: <span id="stat-wnioski">...</span></li>
-      <li>👥 Liczba zalogowanych mieszkańców: <span id="stat-uzytkownicy">...</span></li>
-      <li>💬 Liczba komunikatów: <span id="stat-komunikaty">...</span></li>
-    </ul>
+
+  <main>
+    <div class="admin-back">
+      <a href="admin-panel.html" class="btn-nik">⬅ Powrót do panelu głównego</a>
+    </div>
+
+    <section class="stats-box">
+      <h2>📈 Statystyki systemowe</h2>
+      <p class="stats-desc">Wyświetl dane i aktywność mieszkańców.</p>
+      <ul class="stats-list">
+        <li>📊 <strong>Liczba zgłoszonych wniosków:</strong> <span id="stat-wnioski">27</span></li>
+        <li>👥 <strong>Liczba zalogowanych mieszkańców:</strong> <span id="stat-uzytkownicy">123</span></li>
+        <li>💬 <strong>Liczba komunikatów:</strong> <span id="stat-komunikaty">8</span></li>
+      </ul>
+    </section>
+
+    <section class="admin-wnioski-box">
+      <h3>📑 Lista zgłoszonych wniosków</h3>
+
+      <div class="wniosek-card">
+        <p><strong>Typ:</strong> Naprawa drogi</p>
+        <button class="toggle-btn" onclick="toggleWniosek(this)">Pokaż szczegóły</button>
+        <div class="wniosek-szczegoly">
+          <p><strong>Opis:</strong> W drodze do szkoły są głębokie dziury, które zagrażają bezpieczeństwu dzieci.</p>
+          <p><strong>Zgłoszone przez:</strong> jan.kowalski</p>
+        </div>
+      </div>
+
+      <div class="wniosek-card">
+        <p><strong>Typ:</strong> Brak oświetlenia</p>
+        <button class="toggle-btn" onclick="toggleWniosek(this)">Pokaż szczegóły</button>
+        <div class="wniosek-szczegoly">
+          <p><strong>Opis:</strong> Od tygodnia nie działa latarnia przy ul. Lipowej 10.</p>
+          <p><strong>Zgłoszone przez:</strong> anna.nowak</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-users-grid">
+      <h3>👥 Lista zalogowanych mieszkańców</h3>
+      <div class="user-grid">
+
+        <div class="user-tile">
+          <div class="user-header">
+            <strong>jan.kowalski</strong>
+            <span class="user-role">mieszkaniec</span>
+          </div>
+          <div class="user-body">
+            <p>Jan Kowalski</p>
+            <p>jan.kowalski@example.com</p>
+          </div>
+        </div>
+
+        <div class="user-tile">
+          <div class="user-header">
+            <strong>anna.nowak</strong>
+            <span class="user-role">mieszkaniec</span>
+          </div>
+          <div class="user-body">
+            <p>Anna Nowak</p>
+            <p>anna.nowak@example.com</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <script src="raporty.js"></script>

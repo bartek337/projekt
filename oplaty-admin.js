@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("paymentForm");
   const table = document.getElementById("paymentTable");
-  const selectLogin = document.getElementById("login");
+  const selectLogin = document.getElementById("userLogin");
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
   let rachunki = JSON.parse(localStorage.getItem("rachunki")) || [];
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const nowy = {
-      login: document.getElementById("login").value,
+      login: document.getElementById("userLogin").value,
       kwota: document.getElementById("amount").value,
       opis: document.getElementById("desc").value,
       status: "oczekuje"
