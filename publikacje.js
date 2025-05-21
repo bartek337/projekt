@@ -17,12 +17,11 @@ function filterPub(category) {
     }
   });
 
-  // przewinięcie do pierwszej dopasowanej karty
   const firstVisible = Array.from(cards).find(c => category === 'all' || c.classList.contains(category));
   if (firstVisible) {
     setTimeout(() => {
       firstVisible.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 300); // czekamy chwilę na animację
+    }, 300); 
   }
 }
   function openGallery() {

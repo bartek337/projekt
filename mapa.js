@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
       maxZoom: 18
     }).addTo(map);
   
-    // Ikony dla atrakcji
+    
     const icon = L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/512/235/235861.png',
       iconSize: [32, 37],

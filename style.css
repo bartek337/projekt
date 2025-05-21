@@ -1762,3 +1762,168 @@ main h2 {
   flex-direction: column;
   gap: 24px; /* lub inna wartość */
 }
+
+/*DO BIBLIOTEKI*/
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.info-panel {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+}
+
+.info-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.info-block {
+  flex: 1 1 300px;
+}
+
+.info-block p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.godziny-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.godziny-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.godziny-list li span {
+  font-weight: bold;
+  color: #333;
+}
+
+.godziny-list .zamkniete {
+  font-style: italic;
+  color: #777;
+}
+.social-link {
+  margin-top: 30px;
+}
+
+.social-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #3b5998;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.social-link a:hover {
+  background-color: #2d4373;
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+}
+/*koniec biblioteki*/
+
+/*GOK*/
+.gok-banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.gok-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+.gok-section h2 {
+  color: #0b5d10;
+  margin-bottom: 15px;
+}
+
+.gok-section p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.gok-link {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #0b5d10;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.gok-link:hover {
+  background-color: #097d18;
+}
+.slider-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+}
+.slider-caption {
+  margin-top: 12px;
+  font-style: italic;
+  color: #444;
+  font-size: 0.95em;
+  transition: opacity 0.1s ease;
+}
+/*DO OŚWIATY*/
+.unit-card a {
+  text-decoration: none; /* usuwa podkreślenie */
+  color: white;           /* kolor tekstu - jak tło kart */
+  display: block;         /* cały box klikalny */
+  font-weight: bold;
+}
+
+.unit-card a:hover {
+  text-decoration: underline; /* opcjonalnie podkreślenie przy najechaniu */
+  color: #d4fddf;              /* jaśniejszy zielony lub inny akcent */
+}

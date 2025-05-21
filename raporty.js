@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Przykładowe dane statystyk
+
   document.getElementById("stat-wnioski").textContent = 27;
   document.getElementById("stat-uzytkownicy").textContent = 123;
   document.getElementById("stat-komunikaty").textContent = 8;

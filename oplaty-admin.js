@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   let rachunki = JSON.parse(localStorage.getItem("rachunki")) || [];
 
-  // Wypełnianie selecta loginami
   users.forEach(user => {
     if (user.login !== "admin") {
       const option = document.createElement("option");
