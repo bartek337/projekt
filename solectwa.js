@@ -3,7 +3,6 @@ fetch("solectwa.json")
 .then((solectwa) => {
   const container = document.getElementById("solectwa-lista");
 
-  // Tworzenie kafelków
   solectwa.forEach((item) => {
     const card = document.createElement("div");
     card.className = "col";
@@ -19,15 +18,13 @@ fetch("solectwa.json")
     container.appendChild(card);
   });
 
-  // Wyświetlanie mapy
-  const mapa = L.map('mapa-solectw').setView([52.07, 22.55], 11); // środek gminy
+  const mapa = L.map('mapa-solectw').setView([52.07, 22.55], 11); 
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap',
     maxZoom: 18,
   }).addTo(mapa);
 
-  // Dodawanie pinezek
   solectwa.forEach((item) => {
     if (item.lat && item.lng) {
       const marker = L.marker([item.lat, item.lng]).addTo(mapa);

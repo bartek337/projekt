@@ -104,22 +104,15 @@
   </header>
 
   <main class="content official-card">
-  <h2>Moje zgłoszenia</h2>
-  <p>Poniżej znajduje się lista Twoich dotychczasowych zgłoszeń.</p>
-  <div id="zgloszenia-lista"></div>
-</main>
+    <h2>Moje zgłoszenia</h2>
+    <p>Poniżej znajduje się lista Twoich dotychczasowych zgłoszeń.</p>
+    <div id="zgloszenia-lista"></div>
+  </main>
 
 <footer>
   <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
 </footer>
 
-<script>
-  const loggedUser = localStorage.getItem("loggedUser");
-  if (!loggedUser) {
-    alert("Nie jesteś zalogowany. Przekierowanie do logowania...");
-    window.location.href = "login.html";
-  }
-</script>
 <script src="zgloszenia.js"></script>
 </body>
 </html>

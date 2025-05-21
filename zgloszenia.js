@@ -1,44 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const user = localStorage.getItem("loggedUser");
-  const container = document.getElementById("zgloszenia-lista");
+  const lista = document.getElementById("zgloszenia-lista");
 
-  if (!user) {
-    container.innerHTML = "<p>Brak dostępu. Nie jesteś zalogowany.</p>";
-    return;
-  }
 
-  const allIssues = JSON.parse(localStorage.getItem("zgłoszenia")) || [];
-
-  const moje = allIssues.filter(z => z.login === user);
-
-  if (moje.length === 0) {
-    container.innerHTML = "<p>Nie masz jeszcze żadnych zgłoszeń.</p>";
-    return;
-  }
-
-  moje.forEach(z => {
-    const box = document.createElement("div");
-    box.classList.add("zgloszenie-box");
-
-    box.innerHTML = `
-      <h4>${z.kategoria}</h4>
-      <p><strong>Opis:</strong> ${z.opis}</p>
-      <p><strong>Status:</strong> <span class="status ${z.status}">${formatStatus(z.status)}</span></p>
-    `;
-
-    container.appendChild(box);
-  });
-
-  function formatStatus(st) {
-    switch (st) {
-      case "oczekuje":
-        return "Oczekuje na rozpatrzenie";
-      case "przyjete":
-        return "Przyjęte do realizacji";
-      case "rozpatrzone":
-        return "Rozpatrzone";
-      default:
-        return st;
+  const zgloszenia = [
+    {
+      login: "anna.kowalska",
+      typ: "Brak oświetlenia",
+      opis: "Nie działa latarnia przy ul. Leśnej 4",
+      status: "oczekuje"
+    },
+    {
+      login: "jan.nowak",
+      typ: "Dziura w drodze",
+      opis: "Duża wyrwa przy remizie OSP",
+      status: "przyjete"
+    },
+    {
+      login: "kasia.zielinska",
+      typ: "Uszkodzony przystanek",
+      opis: "Zbite szkło na przystanku przy szkole",
+      status: "rozpatrzone"
     }
-  }
+  ];
+
+  zgloszenia.forEach((z, index) => {
+    const box = document.createElement("div");
+    box.className = "zgloszenie-box";
+    box.innerHTML = `
+      <h4>📄 Zgłoszenie #${index + 1}</h4>
+      <p><strong>Typ:</strong> ${z.typ}</p>
+      <p><strong>Opis:</strong> ${z.opis}</p>
+      <p><strong>Status:</strong> <span class="status ${z.status}">${z.status}</span></p>
+      <p><strong>Użytkownik:</strong> ${z.login}</p>
+    `;
+    lista.appendChild(box);
+  });
 });

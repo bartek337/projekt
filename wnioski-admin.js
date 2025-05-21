@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const listaEl = document.getElementById("wnioskiLista");
 
-  // Dodaj przykładowe dane jeśli brak w localStorage
   if (!localStorage.getItem("wnioski")) {
     const przykladowe = [
       {
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let wnioski = JSON.parse(localStorage.getItem("wnioski"));
 
-  // Dodaj nowy testowy wniosek jeśli jeszcze nie istnieje
   const nowyWniosekId = "003";
   if (!wnioski.some(w => w.id === nowyWniosekId)) {
     wnioski.push({
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("wnioski", JSON.stringify(wnioski));
   }
 
-  // Funkcja renderująca
   function renderujWnioski() {
     listaEl.innerHTML = "";
     wnioski.forEach((w, index) => {
@@ -68,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Zmiana statusu z potwierdzeniem
   window.zmienStatus = function(index, nowyStatus) {
     const potwierdzenie = confirm(`Czy na pewno chcesz oznaczyć wniosek jako "${nowyStatus}"?`);
     if (!potwierdzenie) return;
@@ -78,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderujWnioski();
   };
 
-  // Cofnięcie decyzji
   window.anulujStatus = function(index) {
     const potwierdzenie = confirm("Czy na pewno chcesz cofnąć decyzję i przywrócić status 'oczekuje'?");
     if (!potwierdzenie) return;
@@ -88,6 +83,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderujWnioski();
   };
 
-  // Pierwsze renderowanie
   renderujWnioski();
 });
