@@ -1318,6 +1318,16 @@ main h2 {
 
 /*OPŁATY OD ADMINISTRATORA*/
 
+/* @media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+} */
+
+
+
 .admin-payment-grid {
   display: flex;
   flex-direction: column;
@@ -1480,31 +1490,97 @@ main h2 {
 .stats-list li:last-child {
   border-bottom: none;
 }
-.admin-wnioski-box {
+
+/*WNINOSKI*/
+
+.wnioski-admin-box {
   max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.wniosek-card {
-  border-left: 5px solid #0b5d10;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+.wnioski-admin-box h2 {
+  color: #0b5d10;
+  font-size: 1.8em;
+  margin-bottom: 10px;
 }
 
-.wniosek-szczegoly {
-  display: none;
-  margin-top: 10px;
-  background: #eef9f1;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 0.95em;
+.wnioski-admin-box .lead {
+  font-size: 1.05em;
+  color: #555;
+  margin-bottom: 25px;
 }
+
+.wniosek-card {
+  padding: 20px;
+  border-left: 5px solid #0b5d10;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+/* Tło w zależności od statusu */
+.wniosek-oczekuje {
+  background-color: #f9f9f9;
+}
+
+.wniosek-przyjete {
+  background-color: #e5f9ec;
+}
+
+.wniosek-odrzucone {
+  background-color: #fdeaea;
+}
+.wniosek-card p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wniosek-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-accept,
+.btn-reject {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-accept {
+  background-color: #0b5d10;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #097d18;
+}
+
+.btn-reject {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-reject:hover {
+  background-color: #a30000;
+}
+.btn-reject[onclick*="anulujStatus"] {
+  background-color: #d08700;
+}
+
+.btn-reject[onclick*="anulujStatus"]:hover {
+  background-color: #b06c00;
+}
+/*KONIEC WNIOSKÓW*/
+
 .admin-users-box {
   max-width: 800px;
   margin: 40px auto;

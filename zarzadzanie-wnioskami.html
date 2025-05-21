@@ -7,17 +7,36 @@
 </head>
 <body>
   <header class="gmina-header">
-    <h1>Zarządzanie wnioskami</h1>
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">Panel Administratora</h1>
+      </div>
+    </div>
   </header>
-  <div class="admin-back">
-    <a href="admin-panel.html" class="btn-nik">⬅ Powrót do panelu głównego</a>
-  </div>
-  <main class="content official-card">
-    <p>Przeglądaj i zarządzaj zgłoszonymi wnioskami mieszkańców.</p>
-    <ul>
-      <li>📥 Wniosek nr 001 – <button>Przyjmij</button> <button>Odrzuć</button></li>
-      <li>📥 Wniosek nr 002 – <button>Przyjmij</button> <button>Odrzuć</button></li>
-    </ul>
+
+  <main>
+    <div class="admin-back">
+      <a href="admin-panel.html" class="btn-nik">⬅ Powrót do panelu głównego</a>
+    </div>
+
+    <section class="wnioski-admin-box">
+      <h2>📥 Zarządzanie wnioskami</h2>
+      <p class="lead">Przeglądaj i zarządzaj zgłoszonymi wnioskami mieszkańców.</p>
+      
+      <div id="wnioskiLista"></div>
+
+    </section>
   </main>
+  <script src="wnioski-admin.js"></script>
+
 </body>
 </html>
