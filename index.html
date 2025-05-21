@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ======= HEADER START ======= -->
+
     <header class="gmina-header">
       <div class="gmina-bar">
         <div class="gmina-left">
@@ -30,7 +30,6 @@
         </div>
       </div>
   
-    <!-- MENU -->
     <nav>
       <ul class="gmina-menu">
         <li><a href="index.html">Strona główna</a></li>
@@ -66,7 +65,6 @@
       </ul>
     </nav>
   </header>
-<!-- ======= HEADER END ======= -->
 
     <main>
         <section class="info-menu">
@@ -80,7 +78,7 @@
           <div id="gminaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-pause="hover">
 
             <div class="carousel-inner">
-              <!-- Slajd 1 -->
+
               <div class="carousel-item active">
                 <div class="carousel-image-container">
                   <img src="https://picsum.photos/id/1018/1200/400" class="d-block w-100" alt="Dożynki 2024">
@@ -90,7 +88,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Slajd 2 -->
+          
               <div class="carousel-item">
                 <div class="carousel-image-container">
                   <img src="https://picsum.photos/id/1021/1200/400" class="d-block w-100" alt="Bieg Niepodległości">
@@ -100,7 +98,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Slajd 3 -->
+        
               <div class="carousel-item">
                 <div class="carousel-image-container">
                   <img src="https://picsum.photos/id/1039/1200/400" class="d-block w-100" alt="Dzień Dziecka">
@@ -110,7 +108,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Slajd 4 -->
+      
               <div class="carousel-item">
                 <div class="carousel-image-container">
                   <img src="https://picsum.photos/id/1041/1200/400" class="d-block w-100" alt="Jarmark Wielkanocny">
@@ -120,7 +118,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Slajd 5 -->
+   
               <div class="carousel-item">
                 <div class="carousel-image-container">
                   <img src="https://picsum.photos/id/1044/1200/400" class="d-block w-100" alt="Święto Strażaka">
@@ -131,8 +129,7 @@
                 </div>
               </div>
             </div>
-        
-            <!-- Nawigacja -->
+
             <button class="carousel-control-prev" type="button" data-bs-target="#gminaCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Poprzedni</span>
@@ -145,7 +142,7 @@
         </section>
         
 
-        <!-- Sekcja aktualności w obramowaniu -->
+
 <section class="container my-5">
   <div class="p-4 rounded shadow-sm aktualnosci-ramka">
 
@@ -153,7 +150,6 @@
       <h3 class="mb-4">Aktualności</h3>
     </a>
 
-    <!-- Kafelek 1 -->
     <div class="row align-items-center p-3 mb-3 shadow-sm bg-light rounded aktualnosc-box">
       <div class="col-md-4">
         <img src="https://source.unsplash.com/500x300/?harvest" class="img-fluid rounded" alt="Dożynki Gminne">
@@ -164,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Kafelek 2 -->
     <div class="row align-items-center p-3 mb-3 shadow-sm bg-white rounded aktualnosc-box">
       <div class="col-md-4">
         <img src="https://source.unsplash.com/500x300/?family,fair" class="img-fluid rounded" alt="Festyn Rodzinny">
@@ -175,7 +170,6 @@
       </div>
     </div>
 
-    <!-- Kafelek 3 -->
     <div class="row align-items-center p-3 mb-3 shadow-sm bg-light rounded aktualnosc-box">
       <div class="col-md-4">
         <img src="https://source.unsplash.com/500x300/?independence,march" class="img-fluid rounded" alt="Marsz dla Niepodległej">
@@ -224,7 +218,7 @@
     </footer>
     <script>
         document.getElementById('toggleDropdown').addEventListener('click', function (e) {
-            e.preventDefault(); // blokuje domyślne przeładowanie
+            e.preventDefault(); 
             const dropdown = this.closest('.dropdown');
             dropdown.classList.toggle('open');
         });
@@ -247,7 +241,7 @@
       'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'
     ];
     
-    let currentDate = new Date(2025, 4); // Maj 2025
+    let currentDate = new Date(2025, 4); 
     
     function renderCalendar(date) {
       calendarDays.innerHTML = '';

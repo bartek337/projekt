@@ -422,7 +422,7 @@ background-color: #0d7447;
 
 /* skibidi */ 
   .contact-layout {
-    padding-top: 180px;
+    /*padding-top: 180px;*/
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -876,7 +876,7 @@ background-color: #0d7447;
 
 /* Ważne: Odstęp na treść, żeby header nic nie zasłaniał */
 main, .content, .page-content {
-  padding-top: 130px; /* dostosuj do wysokości headera + menu */
+  padding-top: 180px; /* dostosuj do wysokości headera + menu */
 }
 
 .contact-columns {
@@ -895,6 +895,7 @@ main, .content, .page-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
   padding: 20px;
   max-width: 400px;
 }
@@ -1383,6 +1384,7 @@ main h2 {
 .admin-payment-list {
   margin-top: 50px;
 }
+/* mikolaj jak jeszcze raz usuniesz mi styl to ci wloze w pizde kabel od kl05z */
 
 .admin-payment-list table {
   width: 100%;
@@ -1584,4 +1586,80 @@ main h2 {
   margin: 2px 0;
   font-size: 0.95em;
   color: #333;
+}
+
+.aktualnosc-kafelek {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aktualnosc-kafelek:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* TESTOWE RAMKI */
+
+.section-card {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.aktualnosci-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.separator {
+  border-bottom: 2px solid rgba(0, 128, 0, 0.4);
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.news-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 20px 20px 28px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  overflow: hidden;
+}
+
+.news-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 6px;
+  background-color: transparent;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-2px);
+  background-color: rgba(89, 157, 106, 0.627); /* jasno przezroczysto-zielony */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.news-item:hover::before {
+  background-color: #006400; /* ciemna zieleń po lewej */
+}
+
+/* KURWA POMOCY */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* lub inna wartość */
 }
