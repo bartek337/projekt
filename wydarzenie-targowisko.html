@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otwarcie Targowiska Gminnego</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="gmina-header">
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">GMINA TRZEBIESZÓW</h1>
+      </div>
+      <div class="gmina-right">
+        <a href="login.html" class="login-btn">Zaloguj się</a>
+      </div>
+    </div>
+    <nav>
+      <ul class="gmina-menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li class="dropdown">
+          <a href="#">Informacje o Gminie</a>
+          <ul class="dropdown-content">
+            <li><a href="historia.html">Historia gminy</a></li>
+            <li><a href="barwy.html">Herb gminy</a></li>
+            <li><a href="wladze.html">Władze Gminy</a></li>
+            <li><a href="struktura.html">Struktura Organizacyjna</a></li>
+            <li><a href="solectwa.html">Sołectwa</a></li>
+            <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
+            <li><a href="produkty.html">Produkty Lokalne</a></li>
+            <li><a href="obywatele.html">Honorowi Obywatele</a></li>
+            <li><a href="publikacje.html">Publikacje o gminie</a></li>
+            <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
+            <li><a href="partnerstwo.html">Jednostki organizacyjne</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Panel Mieszkańca</a>
+          <ul class="dropdown-content">
+            <li><a href="zgloszenia.html">Zgłoszenia</a></li>
+            <li><a href="moje_zgloszenia.html">Moje Zgłoszenia</a></li>
+            <li><a href="ankiety.html">Ankiety</a></li>
+            <li><a href="zameldowanie.html">Zameldowanie</a></li>
+            <li><a href="oplaty.html">Opłaty</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN TREŚĆ WYDARZENIA -->
+  <main>
+    <div class="aktualnosc-banner" style="margin-top: 30px;">
+      <img src="https://www.trzebieszow.gmina.pl/wp-content/uploads/2024/05/targowisko.jpg" alt="Targowisko Gminne">
+    </div>
+    <div class="aktualnosc-ramka">
+      <h2>Otwarcie Targowiska Gminnego dla Handlu Żywym Inwentarzem</h2>
+      <div class="aktualnosc-zdjecie-tekst">
+        <img src="https://www.trzebieszow.gmina.pl/wp-content/uploads/2024/05/targowisko.jpg" alt="Targowisko" class="left-image">
+        <p>Z radością informujemy, że na terenie naszej gminy uruchomiono nowe targowisko przeznaczone do handlu żywymi zwierzętami. Inwestycja ta ma na celu wsparcie lokalnych hodowców i rolników, tworząc bezpieczne i nowoczesne miejsce do prowadzenia działalności handlowej.</p>
+      </div>
+      <div class="aktualnosc-zdjecie-tekst">
+        <p>Targowisko zostało wyposażone w odpowiednie boksy i infrastrukturę sanitarną, co spełnia wymagania weterynaryjne i zapewnia dobrostan zwierząt. Nowa przestrzeń umożliwia prowadzenie handlu w warunkach dostosowanych do potrzeb sprzedających i kupujących, sprzyjając lokalnej gospodarce.</p>
+        <img src="https://cdn.pixabay.com/photo/2018/05/04/19/20/market-3374482_960_720.jpg" alt="Handel" class="right-image">
+      </div>
+      <p style="margin-top: 20px;">Zapraszamy wszystkich zainteresowanych do korzystania z nowego obiektu. Targowisko będzie funkcjonować w wyznaczone dni tygodnia, zgodnie z harmonogramem opublikowanym przez urząd gminy. Szczegóły dotyczące rezerwacji stanowisk i regulaminu dostępne są w biurze targowiska oraz na stronie internetowej gminy.</p>
+    </div>
+    <section class="komentarze">
+        <h3>Komentarze</h3>
+  
+        <div class="komentarz">
+          <div class="komentarz-header">
+            <span class="autor">Anna K.</span>
+            <span class="data">2025-05-25</span>
+          </div>
+          <p>Świetna inicjatywa! Zawsze z przyjemnością przychodzę na te zawody – dzieciaki były zachwycone pokazami strażackimi 😊</p>
+        </div>
+  
+        <div class="komentarz">
+          <div class="komentarz-header">
+            <span class="autor">Tomasz B.</span>
+            <span class="data">2025-05-26</span>
+          </div>
+          <p>Wspaniała organizacja i ogromne brawa dla wszystkich jednostek OSP! Super atmosfera i dużo atrakcji.</p>
+        </div>
+  
+        <div class="dodaj-komentarz">
+          <h4>Dodaj komentarz</h4>
+          <script>
+            // Prosta symulacja czy użytkownik jest zalogowany (np. przez localStorage lub sesję)
+            const userLoggedIn = false; // tutaj zmień na true, jeśli chcesz zobaczyć formularz
+            if (!userLoggedIn) {
+              document.write('<div class="alert-login"><p>Aby dodać komentarz, <a href="login.html">zaloguj się</a>.</p></div>');
+            } else {
+              document.write(`
+                <form class="formularz-komentarz">
+                  <textarea placeholder="Napisz swój komentarz..." required></textarea>
+                  <button type="submit">Wyślij</button>
+                </form>
+              `);
+            }
+          </script>
+        </div>
+      </section>
+  </main>
+</body>
+</html>
