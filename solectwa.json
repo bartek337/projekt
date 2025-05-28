@@ -4,126 +4,144 @@
       "soltys": "Paweł Wierzejski",
       "link": "solectwo-wierzejki.html",
       "lat": 52.02855,
-      "lng": 22.56391
+      "lng": 22.56391,
+      "obraz": "wierzejkisolectwo.jpg"
     },
     {
       "nazwa": "Leszczanka",
       "soltys": "Stanisław Izdebski",
       "link": "solectwo-leszczanka.html",
       "lat": 51.99574,
-      "lng": 22.61363
+      "lng": 22.61363,
+      "obraz": "leszczankasolectwo.jpg"
     },
     {
       "nazwa": "Celiny",
       "soltys": "Paweł Karwowski",
       "link": "solectwo-celiny.html",
       "lat": 51.99421,
-      "lng": 22.46665
+      "lng": 22.46665,
+      "obraz": "celinysolectwo.jpg"
     },
     {
         "nazwa": "Karwów",
         "soltys": "Wojciech Zabłocki",
-        "link": "solectwo-celiny.html",
+        "link": "solectwo-karwow.html",
         "lat": 51.97201,
-        "lng": 22.50298
+        "lng": 22.50298,
+      "obraz": "karwowsolectwo.jpg"
     },
     {
         "nazwa": "Mikłusy",
         "soltys": "Anna Wierzejska",
-        "link": "solectwo-miklusyy.html",
+        "link": "solectwo-miklusy.html",
         "lat": 52.04670,
-        "lng": 22.50783
+        "lng": 22.50783,
+      "obraz": "miklusysolectwo.jpg"
     },
     {
         "nazwa": "Płudy",
         "soltys": "Monika Płudowska",
         "link": "solectwo-pludy.html",
         "lat": 52.02800,
-        "lng": 22.54191
+        "lng": 22.54191,
+      "obraz": "pludysolectwo.jpg"
     },
     {
         "nazwa": "Popławy-Rogale",
         "soltys": "Wioletta Zdańkowska",
         "link": "solectwo-poplawy.html",
         "lat": 51.99311,
-        "lng": 22.52173
+        "lng": 22.52173,
+      "obraz": "poplawysolectwo.jpg"
     },
     {
         "nazwa": "Świercze",
         "soltys": "Małgorzata Mościcka",
         "link": "solectwo-swiercze.html",
         "lat": 51.97129,
-        "lng": 22.47447
+        "lng": 22.47447,
+      "obraz": "swierczesolectwo.jpg"
     },
     {
         "nazwa": "Szaniawy-Matysy",
         "soltys": "Edyta Smarżewska",
         "link": "solectwo-szaniawym.html",
         "lat": 51.93937,
-        "lng": 22.49917
+        "lng": 22.49917,
+      "obraz": "szaniawymsolectwo.jpg"
     },
     {
-        "nazwa": "Szaniawy-Poniatyy",
+        "nazwa": "Szaniawy-Poniaty",
         "soltys": "Stanisław Szaniawski",
         "link": "solectwo-szaniawyp.html",
         "lat": 51.95056,
-        "lng": 22.52613
+        "lng": 22.52613,
+      "obraz": "szaniawypsolectwa.jpg"
     },
     {
         "nazwa": "Trzebieszów Pierwszy",
         "soltys": "Jarosław Sulej",
         "link": "solectwo-trzebieszów.html",
         "lat": 51.98147,
-        "lng": 22.52511
+        "lng": 22.52511,
+      "obraz": "trzebieszowpsolectwo.jpg"
     },
     {
         "nazwa": "Trzebieszów Drugi",
         "soltys": "Tomasz Boboń",
         "link": "solectwo-trzebieszówdwa.html",
         "lat": 51.98688,
-        "lng": 22.54519
+        "lng": 22.54519,
+      "obraz": "trzebieszowdsolectwo.jpg"
     },
     {
         "nazwa": "Trzebieszów ",
         "soltys": "Marzena Kurowska",
         "link": "solectwo-trzebieszów.html",
         "lat": 51.98963,
-        "lng": 22.55635
+        "lng": 22.55635,
+      "obraz": "trzebieszowsolectwo.jpg"
     },
     {
         "nazwa": "Trzebieszów-Kolonia",
         "soltys": "Marcin Śledź",
         "link": "solectwo-trzebieszówkolonia.html",
         "lat": 51.99660,
-        "lng": 22.56819
+        "lng": 22.56819,
+      "obraz": "trzebieszowksolectwo.jpg"
     },
     {
         "nazwa": "Wólka Konopna",
         "soltys": "brak",
         "link": "solectwo-wolka.html",
         "lat": 52.03833,
-        "lng": 22.47026
+        "lng": 22.47026,
+      "obraz": "wolkasolectwo.jpg"
     },
     {
         "nazwa": "Wylany",
         "soltys": "Roman Krasuski",
         "link": "solectwo-wylany.html",
         "lat": 52.00812,
-        "lng": 22.53669
+        "lng": 22.53669,
+      "obraz": "wylanysolectwo.jpg"
     },
     {
         "nazwa": "Zaolszynie",
         "soltys": "Marianna Grabowiec",
         "link": "solectwo-zaolszynie.html",
         "lat": 52.05236,
-        "lng": 22.51250
+        "lng": 22.51250,
+      "obraz": "zaolszyniesolectwo.jpg"
     },
     {
         "nazwa": "Zembry",
         "soltys": "Krzysztof Jasiński",
         "link": "solectwo-zembry.html",
         "lat": 52.04546,
-        "lng": 22.52416
+        "lng": 22.52416,
+      "obraz": "zembrysolectwo.jpg"
     }
 
   ]

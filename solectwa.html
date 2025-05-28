@@ -4,16 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sołectwa Gminne - Gmina Trzebieszów</title>
-    
-
-    
-
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-
     <link rel="stylesheet" href="style.css" />
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
@@ -77,20 +69,26 @@
 </header>
 
     <main>
-        <div class="container py-4">
-            <h2>Sołectwa Gminy Trzebieszów</h2>
-            <div id="solectwa-lista" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
-                
-            </div>
-        </div>
+    <div class="container py-4">
+      <h2>Sołectwa Gminy Trzebieszów</h2>
+      <div id="solectwa-lista" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3"></div>
+    </div>
     </main>
- 
+
     <div id="mapa-solectw" style="height: 500px; margin-top: 2rem;"></div>
 
-   
+    <!-- 🔽 MODAL z danymi -->
+    <div id="solectwo-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
     <script src="solectwa.js"></script>
+
     <footer class="mt-5">
-        <p>&copy; 2025 Gmina Trzebieszów. Wszelkie prawa zastrzeżone.</p>
+      <p>&copy; 2025 Gmina Trzebieszów. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
