@@ -299,12 +299,10 @@ margin-bottom: 0.5rem;
 color: #2c5030;
 }
 
-
 .card-text {
 margin-bottom: 1rem;
 color: #555;
 }
-
 
 .card a.btn {
 display: inline-block;
@@ -319,6 +317,108 @@ transition: background-color 0.2s;
 
 .card a.btn:hover {
 background-color: #0d7447;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+.modal-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  animation: fadeInModal 0.3s ease;
+}
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-tekst h3 {
+  color: #0b5d10;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.modal-tekst p {
+  font-size: 1em;
+  margin: 6px 0;
+}
+
+.modal-tekst a {
+  color: #017e3a;
+  font-weight: bold;
+  text-decoration: none;
+}
+.modal-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0f0f0; /* opcjonalne tło pod zdjęciem */
+}
+.modal-tekst a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+.details-btn {
+  background-color: #0b5d10;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.details-btn:hover {
+  background-color: #097d18;
 }
 /*turystyka*/
 .tur-header {
@@ -916,7 +1016,7 @@ main h2 {
 }
 .btn-nik {
   display: inline-block;
-  background-color: #017e3a;
+  background-color: #1b6809;
   color: #fff;
   padding: 4px 12px; 
   font-size: 0.95rem; 
@@ -961,7 +1061,7 @@ main h2 {
 
 .filters button:hover,
 .filters button.active {
-  background-color: #00a542;
+  background-color: #1b6809;
 }
 .pub-card.hidden {
   display: none;
