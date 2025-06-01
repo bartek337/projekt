@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ankieta: Ocena Urzędu</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ankieta-form {
+      max-width: 650px;
+      margin: 40px auto;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .ankieta-form h2 {
+      color: #1b5e20;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .ankieta-form label {
+      display: block;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .ankieta-form input[type="radio"],
+    .ankieta-form input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .ankieta-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .survey-btn {
+      display: block;
+      margin: 25px auto 0 auto;
+      padding: 12px 24px;
+      background-color: #1b5e20;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .survey-btn:hover {
+      background-color: #146b1d;
+    }
+  </style>
+</head>
+<body>
+  <header class="gmina-header">
+    <div class="gmina-bar">
+      <div class="gmina-left">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqpmsPz5klOJHEx1r9B7XaL_ADtFo8hfZUSw&s" alt="Herb Gminy" class="logo-img">
+        </a>
+        <div class="logo-text">
+          Oficjalna platforma internetowa<br>
+          <strong>Gminy Trzebieszów</strong>
+        </div>
+      </div>
+      <div class="gmina-center">
+        <h1 class="gmina-title">GMINA TRZEBIESZÓW</h1>
+      </div>
+      <div class="gmina-right">
+        <a href="login.html" class="login-btn">Zaloguj się</a>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="gmina-menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li class="dropdown">
+          <a href="#">Informacje o Gminie</a>
+          <ul class="dropdown-content">
+            <li><a href="historia.html">Historia gminy</a></li>
+            <li><a href="barwy.html">Herb gminy</a></li>
+            <li><a href="wladze.html">Władze Gminy</a></li>
+            <li><a href="struktura.html">Struktura Organizacyjna</a></li>
+            <li><a href="solectwa.html">Sołectwa</a></li>
+            <li><a href="turystyka.html">Turystyka i rekreacja</a></li>
+            <li><a href="produkty.html">Produkty Lokalne</a></li>
+            <li><a href="obywatele.html">Honorowi Obywatele</a></li>
+            <li><a href="publikacje.html">Publikacje o gminie</a></li>
+            <li><a href="organizacje.html">Organizacje pozarządowe</a></li>
+            <li><a href="partnerstwo.html">Jednostki organizacyjne</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Panel Mieszkańca</a>
+          <ul class="dropdown-content">
+            <li><a href="zgloszenia.html">Zgłoszenia</a></li>
+            <li><a href="moje_zgloszenia.html">Moje zgłoszenia</a></li>
+            <li><a href="ankiety.html">Ankiety</a></li>
+            <li><a href="zameldowanie.html">Zameldowanie</a></li>
+            <li><a href="oplaty.html">Opłaty</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form class="ankieta-form">
+      <h2>Ocena działalności urzędu gminy</h2>
+
+      <label>1. Jak oceniasz dostępność urzędu (godziny pracy, kontakt)?</label>
+      <label><input type="radio" name="dostepnosc" value="bardzo_dobra" required> Bardzo dobra</label>
+      <label><input type="radio" name="dostepnosc" value="dobra"> Dobra</label>
+      <label><input type="radio" name="dostepnosc" value="srednia"> Średnia</label>
+      <label><input type="radio" name="dostepnosc" value="zla"> Zła</label>
+
+      <br><br>
+
+      <label>2. Jak oceniasz kompetencje i uprzejmość pracowników?</label>
+      <label><input type="radio" name="obsluga" value="bardzo_dobra" required> Bardzo dobra</label>
+      <label><input type="radio" name="obsluga" value="dobra"> Dobra</label>
+      <label><input type="radio" name="obsluga" value="srednia"> Średnia</label>
+      <label><input type="radio" name="obsluga" value="zla"> Zła</label>
+
+      <br><br>
+
+      <label>3. Jakie działy wymagają usprawnienia? (możesz wybrać kilka)</label>
+      <label><input type="checkbox" name="usprawnienia" value="komunikacja"> Komunikacja z mieszkańcami</label>
+      <label><input type="checkbox" name="usprawnienia" value="procedury"> Szybkość załatwiania spraw</label>
+      <label><input type="checkbox" name="usprawnienia" value="cyfryzacja"> Cyfrowe formularze i e-usługi</label>
+      <label><input type="checkbox" name="usprawnienia" value="inne"> Inne</label>
+
+      <br><br>
+
+      <label>4. Twoje dodatkowe uwagi / sugestie:</label>
+      <textarea name="uwagi" rows="4" placeholder="Napisz swoją opinię..."></textarea>
+
+      <button type="submit" class="survey-btn">Wyślij ankietę</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p>
+  </footer>
+</body>
+</html>
