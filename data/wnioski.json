@@ -1,0 +1,33 @@
+[
+  {
+    "id": "001",
+    "typ": "Naprawa drogi",
+    "opis": "W drodze do szko\u0139\u201ay s\u00c4\u2026 dziury",
+    "status": "przyjete"
+  },
+  {
+    "id": "002",
+    "typ": "Brak o\u0139\u203awietlenia",
+    "opis": "Latarnia przy ul. Lipowej 10 nie dzia\u0139\u201aa",
+    "status": "odrzucone"
+  },
+  {
+    "id": "003",
+    "typ": "infrastructure",
+    "opis": "\ud83d\udccd KJNSKC \u2014 jd\n\njdsnic",
+    "status": "oczekuje"
+  },
+  {
+    "id": "004",
+    "typ": "infrastructure",
+    "opis": "\ud83d\udccd jdcbieud \u2014 dcf\n\nskcn os",
+    "email": "jan.kowalski",
+    "status": "oczekuje"
+  },
+  {
+    "id": "005",
+    "typ": "signage",
+    "opis": "\ud83d\udccd isduhcisu \u2014 kdsjcn sdu\n\njhbui",
+    "status": "oczekuje"
+  }
+]

@@ -1,36 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const listaEl = document.getElementById("wnioskiLista");
+  let wnioski = [];
 
-  if (!localStorage.getItem("wnioski")) {
-    const przykladowe = [
-      {
-        id: "001",
-        typ: "Naprawa drogi",
-        opis: "W drodze do szkoły są dziury",
-        status: "oczekuje"
-      },
-      {
-        id: "002",
-        typ: "Brak oświetlenia",
-        opis: "Latarnia przy ul. Lipowej 10 nie działa",
-        status: "oczekuje"
-      }
-    ];
-    localStorage.setItem("wnioski", JSON.stringify(przykladowe));
-  }
-
-  let wnioski = JSON.parse(localStorage.getItem("wnioski"));
-
-  const nowyWniosekId = "003";
-  if (!wnioski.some(w => w.id === nowyWniosekId)) {
-    wnioski.push({
-      id: nowyWniosekId,
-      typ: "Awaria kanalizacji",
-      opis: "Zgłoszenie zalania piwnicy przy ul. Klonowej 12.",
-      status: "oczekuje"
+  // POBIERANIE WNIOSKÓW Z BACKENDU
+  fetch("http://localhost:5000/api/wnioski")
+    .then(res => res.json())
+    .then(data => {
+      wnioski = data;
+      renderujWnioski();
     });
-    localStorage.setItem("wnioski", JSON.stringify(wnioski));
-  }
 
   function renderujWnioski() {
     listaEl.innerHTML = "";
@@ -43,20 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
       else statusClass = "wniosek-oczekuje";
 
       div.className = `wniosek-card ${statusClass}`;
-
       div.innerHTML = `
         <p><strong>Wniosek nr ${w.id}</strong> – ${w.typ}</p>
-        <p>${w.opis}</p>
+        <p><strong>Od:</strong> ${w.email ?? "Nieznany nadawca"}</p>
+        <p>${w.opis.replace(/\n/g, "<br>")}</p>
         <p>Status: <strong>${w.status}</strong></p>
         <div class="wniosek-actions">
           ${
             w.status === "oczekuje"
               ? `
-              <button class="btn-accept" onclick="zmienStatus(${index}, 'przyjete')">Przyjmij</button>
-              <button class="btn-reject" onclick="zmienStatus(${index}, 'odrzucone')">Odrzuć</button>
+              <button class="btn-accept" onclick="zmienStatus('${w.id}', 'przyjete')">Przyjmij</button>
+              <button class="btn-reject" onclick="zmienStatus('${w.id}', 'odrzucone')">Odrzuć</button>
               `
               : `
-              <button class="btn-reject" onclick="anulujStatus(${index})">Cofnij decyzję</button>
+              <button class="btn-reject" onclick="zmienStatus('${w.id}', 'oczekuje')">Cofnij decyzję</button>
               `
           }
         </div>
@@ -65,23 +43,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  window.zmienStatus = function(index, nowyStatus) {
-    const potwierdzenie = confirm(`Czy na pewno chcesz oznaczyć wniosek jako "${nowyStatus}"?`);
+  // FUNKCJA ZMIANY STATUSU – wysyła PATCH do backendu
+  window.zmienStatus = function(id, nowyStatus) {
+    const potwierdzenie = confirm(`Czy na pewno chcesz ustawić status: "${nowyStatus}"?`);
     if (!potwierdzenie) return;
 
-    wnioski[index].status = nowyStatus;
-    localStorage.setItem("wnioski", JSON.stringify(wnioski));
-    renderujWnioski();
+    fetch(`http://localhost:5000/api/wnioski/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ status: nowyStatus }),
+    })
+      .then(res => res.json())
+      .then(() => {
+        // Po zmianie, odśwież dane
+        return fetch("http://localhost:5000/api/wnioski");
+      })
+      .then(res => res.json())
+      .then(data => {
+        wnioski = data;
+        renderujWnioski();
+      });
   };
-
-  window.anulujStatus = function(index) {
-    const potwierdzenie = confirm("Czy na pewno chcesz cofnąć decyzję i przywrócić status 'oczekuje'?");
-    if (!potwierdzenie) return;
-
-    wnioski[index].status = "oczekuje";
-    localStorage.setItem("wnioski", JSON.stringify(wnioski));
-    renderujWnioski();
-  };
-
-  renderujWnioski();
 });

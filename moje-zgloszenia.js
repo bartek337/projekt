@@ -9,13 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const lokalizacja = document.getElementById("location").value;
       const temat = document.getElementById("subject").value;
       const opis = document.getElementById("description").value;
-
-      const email = localStorage.getItem("loggedUser"); // ⬅ Pobieramy login użytkownika
-
-      if (!email) {
-        alert("Musisz być zalogowany, aby wysłać zgłoszenie.");
-        return;
-      }
+      const email = localStorage.getItem("loggedUser");
 
       const pelnyOpis = `📍 ${lokalizacja} — ${temat}\n\n${opis}`;
 
@@ -27,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           typ: typ,
           opis: pelnyOpis,
-          email: email // ⬅ Wysyłamy jako nadawcę
+          email: email // ⬅ przypisanie do zgłoszenia
         })
       })
         .then(res => {
