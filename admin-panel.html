@@ -22,8 +22,9 @@
       <h1 class="gmina-title">GMINA TRZEBIESZÓW</h1>
     </div>
     <div class="gmina-right">
-      <a href="index.html" class="login-btn">Wyloguj</a>
-    </div>
+        <span id="userInfo" style="margin-right: 10px; font-weight: bold;"></span>
+        <a href="login.html" class="login-btn" id="loginBtn">Zaloguj się</a>
+      </div>
   </div>
 </header>
 
@@ -64,6 +65,22 @@
 <footer>
   <p>&copy; 2025 Gmina Trzebieszów | Panel administratora</p>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = localStorage.getItem("loggedUser");
+    const info = document.getElementById("userInfo");
+    const loginBtn = document.getElementById("loginBtn");
 
+    if (user && info && loginBtn) {
+      info.innerText = `👤 ${user}`;
+      loginBtn.innerText = "Wyloguj";
+      loginBtn.href = "#";
+      loginBtn.onclick = () => {
+        localStorage.removeItem("loggedUser");
+        location.reload();
+      };
+    }
+  });
+</script>
 </body>
 </html>

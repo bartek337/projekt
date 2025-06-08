@@ -26,8 +26,9 @@
         </div>
     
         <div class="gmina-right">
-          <a href="login.html" class="login-btn">Zaloguj się</a>
-        </div>
+        <span id="userInfo" style="margin-right: 10px; font-weight: bold;"></span>
+        <a href="login.html" class="login-btn" id="loginBtn">Zaloguj się</a>
+      </div>
       </div>
   
     <nav>
@@ -341,11 +342,28 @@
   showSlide(current);
   startCarousel();
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = localStorage.getItem("loggedUser");
+    const info = document.getElementById("userInfo");
+    const loginBtn = document.getElementById("loginBtn");
+
+    if (user && info && loginBtn) {
+      info.innerText = `👤 ${user}`;
+      loginBtn.innerText = "Wyloguj";
+      loginBtn.href = "#";
+      loginBtn.onclick = () => {
+        localStorage.removeItem("loggedUser");
+        location.reload();
+      };
+    }
+  });
+</script>
 
 
     
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
