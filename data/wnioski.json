@@ -28,6 +28,20 @@
     "id": "005",
     "typ": "signage",
     "opis": "\ud83d\udccd isduhcisu \u2014 kdsjcn sdu\n\njhbui",
-    "status": "oczekuje"
+    "status": "odrzucone"
+  },
+  {
+    "id": "006",
+    "typ": "waste",
+    "opis": "\ud83d\udccd wawelska \u2014 drzewo na drodze\n\nprzewr\u00f3ci\u0142o sie drzewo na drodze i jest klops",
+    "email": "jan.kowalski",
+    "status": "przyjete"
+  },
+  {
+    "id": "007",
+    "typ": "Drogowskaz",
+    "opis": "\ud83d\udccd \u0142ukowska \u2014 Awaria\n\nnie dzia\u0142a znak przy przej\u015bciu dla pieszych",
+    "email": "jan.kowalski",
+    "status": "odrzucone"
   }
 ]
