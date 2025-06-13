@@ -64,12 +64,11 @@
 
   <main>
     <section class="content-section">
-      <h2>Informacje o opłatach</h2>
-      <ul class="payment-info">
-        <li>Podatek od nieruchomości: Termin do 15 marca</li>
-        <li>Opłata za odpady komunalne: co miesiąc do 10 dnia</li>
-        <li>Podatek rolny: dwie raty do 15 maja i 15 września</li>
-      </ul>
+      <div id="moje-oplaty" class="payment-box">
+        <h3>📑 Twoje rachunki</h3>
+        <div id="rachunki-lista"></div>
+      </div>
+
     </section>
   </main>
   <footer><p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p></footer>
@@ -90,5 +89,12 @@
     }
   });
 </script>
+<script src="oplaty.js"></script>
+
 </body>
 </html>
+localStorage.setItem("users", JSON.stringify([
+  { login: "jan.kowalski", imie: "Jan", nazwisko: "Kowalski" },
+  { login: "anna.nowak", imie: "Anna", nazwisko: "Nowak" },
+  { login: "admin", imie: "Admin", nazwisko: "System" }
+]));
