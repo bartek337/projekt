@@ -3,6 +3,7 @@ from flask_cors import CORS
 import json
 import os
 
+
 app = Flask(__name__)
 CORS(app)
 
@@ -35,8 +36,10 @@ def get_wnioski():
 @app.route('/api/wnioski', methods=['POST'])
 def add_wniosek():
     wnioski = load_wnioski()
+    last_id = max([int(w["id"]) for w in wnioski if w.get("id", "").isdigit()], default=0)
     nowy = {
-        "id": str(len(wnioski) + 1).zfill(3),
+        #"id": str(len(wnioski) + 1).zfill(3),
+        "id": str(last_id + 1).zfill(3),  # np. "009"
         "typ": request.json.get("typ"),
         "opis": request.json.get("opis"),
         "email": request.json.get("email"),  # Dodane
