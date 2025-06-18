@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const table = document.getElementById("paymentTable");
   const selectLogin = document.getElementById("userLogin");
 
-  // ⬇️ 1. Jeśli brak danych użytkowników — tworzymy przykładowych
   if (!localStorage.getItem("users")) {
     localStorage.setItem("users", JSON.stringify([
       { login: "jan.kowalski", imie: "Jan", nazwisko: "Kowalski" },
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const users = JSON.parse(localStorage.getItem("users"));
   let rachunki = JSON.parse(localStorage.getItem("rachunki")) || [];
 
-  // ⬇️ 2. Wypełnij dropdown loginami użytkowników (bez admina)
+  
   users.forEach(user => {
     if (user.login !== "admin") {
       const option = document.createElement("option");
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ⬇️ 3. Aktualizuj tabelę opłat
+
   function odswiezTabele() {
     table.innerHTML = "";
     rachunki.forEach(r => {
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ⬇️ 4. Obsługa formularza dodawania rachunku
   form.addEventListener("submit", e => {
     e.preventDefault();
 

@@ -3,7 +3,7 @@ fetch("solectwa.json")
   .then((solectwa) => {
     const container = document.getElementById("solectwa-lista");
 
-    // Tworzenie kart
+  
     solectwa.forEach((item, index) => {
       const card = document.createElement("div");
       card.className = "col";
@@ -19,14 +19,14 @@ fetch("solectwa.json")
       container.appendChild(card);
     });
 
-    // Inicjalizacja mapy
+
     const mapa = L.map('mapa-solectw').setView([52.07, 22.55], 11);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
       maxZoom: 18,
     }).addTo(mapa);
 
-    // Pinezki z popupami
+
     solectwa.forEach((item) => {
       if (item.lat && item.lng) {
         const marker = L.marker([item.lat, item.lng]).addTo(mapa);
@@ -41,7 +41,7 @@ fetch("solectwa.json")
       }
     });
 
-    // Obsługa modala
+
     const modal = document.getElementById("solectwo-modal");
     const modalBody = document.getElementById("modal-body");
     const closeBtn = document.querySelector(".close-btn");
@@ -68,14 +68,14 @@ fetch("solectwa.json")
       });
     });
 
-    // Zamknięcie przy X
+ 
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
         modal.classList.add("hidden");
       });
     }
 
-    // Zamknięcie po kliknięciu w tło
+    
     modal.addEventListener("click", (e) => {
       const modalContent = document.querySelector(".modal-content");
       if (!modalContent.contains(e.target)) {

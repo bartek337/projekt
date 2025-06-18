@@ -1,77 +1,23 @@
 [
   {
-    "id": "003",
-    "typ": "infrastructure",
-    "opis": "\ud83d\udccd KJNSKC \u2014 jd\n\njdsnic",
+    "id": "001",
+    "typ": "Infrastruktura",
+    "opis": "\ud83d\udccd Testowa 1 \u2014 Test 1 \n\nTest 1",
+    "email": "anna.nowak",
     "status": "przyjete"
   },
   {
-    "id": "004",
-    "typ": "infrastructure",
-    "opis": "\ud83d\udccd jdcbieud \u2014 dcf\n\nskcn os",
-    "email": "jan.kowalski",
-    "status": "przyjete"
-  },
-  {
-    "id": "005",
-    "typ": "signage",
-    "opis": "\ud83d\udccd isduhcisu \u2014 kdsjcn sdu\n\njhbui",
-    "status": "oczekuje"
-  },
-  {
-    "id": "006",
-    "typ": "waste",
-    "opis": "\ud83d\udccd wawelska \u2014 drzewo na drodze\n\nprzewr\u00f3ci\u0142o sie drzewo na drodze i jest klops",
-    "email": "jan.kowalski",
-    "status": "przyjete"
-  },
-  {
-    "id": "007",
+    "id": "002",
     "typ": "Drogowskaz",
-    "opis": "\ud83d\udccd \u0142ukowska \u2014 Awaria\n\nnie dzia\u0142a znak przy przej\u015bciu dla pieszych",
-    "email": "jan.kowalski",
-    "status": "przyjete"
+    "opis": "\ud83d\udccd Testowa 2 \u2014 Test 2 \n\nTest 2\n",
+    "email": "anna.nowak",
+    "status": "odrzucone"
   },
   {
-    "id": "006",
-    "typ": "Infrastruktura",
-    "opis": "\ud83d\udccd sggdsgdssdggsd \u2014 gsdgdssdgsdggsd\n\ngfghfgh",
+    "id": "003",
+    "typ": "Inne",
+    "opis": "\ud83d\udccd Testowa 3 \u2014 Test 3 \n\nTest 3",
     "email": "anna.nowak",
     "status": "oczekuje"
-  },
-  {
-    "id": "007",
-    "typ": "zameldowanie",
-    "opis": "\ud83d\udc64 Anna Nowak\n\ud83c\udfe0 Nowy adres: Karmelicka 5",
-    "email": "anna.nowak",
-    "status": "oczekuje"
-  },
-  {
-    "id": "008",
-    "typ": "zameldowanie",
-    "opis": "\ud83d\udc64 Jan Kowalski\n\ud83c\udfe0 Nowy adres: Karmelicka 5",
-    "email": "jan.kowalski",
-    "status": "przyjete"
-  },
-  {
-    "id": "009",
-    "typ": "Infrastruktura",
-    "opis": "\ud83d\udccd fgdhgggfhghf \u2014 fghfghfhgfghgfh\n\nhgffghgfhfghfhg",
-    "email": "anna.nowak",
-    "status": "przyjete"
-  },
-  {
-    "id": "010",
-    "typ": "Infrastruktura",
-    "opis": "\ud83d\udccd hfdhfduykyiiuy \u2014 oiuiouio\n\nuioiuoiuouio",
-    "email": "jan.kowalski",
-    "status": "przyjete"
-  },
-  {
-    "id": "011",
-    "typ": "Infrastruktura",
-    "opis": "\ud83d\udccd ouipoiupjhkjhk \u2014 hkjgjkuyoiyuiyu\n\nhgjkfghsdafasdasfd",
-    "email": "anna.nowak",
-    "status": "przyjete"
   }
 ]

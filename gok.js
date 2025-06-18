@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // Start na początku
+ 
   updateSlider();
 
   setInterval(() => {

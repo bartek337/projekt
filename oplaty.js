@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <p><strong>📌 Status:</strong> <span class="status ${r.status}">${r.status}</span></p>
     `;
 
-    // Dodaj przycisk jeśli status to "oczekuje"
+    
     if (r.status === "oczekuje") {
       const btn = document.createElement("button");
       btn.textContent = "💳 Opłać";
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.onclick = () => {
         r.status = "oplacone";
         localStorage.setItem("rachunki", JSON.stringify(rachunki));
-        location.reload(); // Odśwież stronę
+        location.reload(); 
       };
       div.appendChild(btn);
     }

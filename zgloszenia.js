@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const temat = document.getElementById("subject").value;
       const opis = document.getElementById("description").value;
 
-      const email = localStorage.getItem("loggedUser"); // ⬅ Pobieramy login użytkownika
+      const email = localStorage.getItem("loggedUser"); 
 
       if (!email) {
         alert("Musisz być zalogowany, aby wysłać zgłoszenie.");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           typ: typ,
           opis: pelnyOpis,
-          email: email // ⬅ Wysyłamy jako nadawcę
+          email: email 
         })
       })
         .then(res => {
