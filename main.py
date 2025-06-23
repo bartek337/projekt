@@ -60,5 +60,45 @@ def zmien_status(id):
             return jsonify(w)
     return jsonify({"error": "Nie znaleziono"}), 404
 
+ANKIETY_DIR = os.path.join("data")
+ANKIETA1_PATH = os.path.join(ANKIETY_DIR, "ankieta1.json")
+ANKIETA2_PATH = os.path.join(ANKIETY_DIR, "ankieta2.json")
+
+def save_json(path, data):
+    with open(path, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_json(path):
+    if not os.path.exists(path):
+        return []
+    with open(path, 'r') as f:
+        return json.load(f)
+
+@app.route('/api/ankiety/inwestycje', methods=['POST'])
+def zapisz_ankiete1():
+    dane = request.json
+    wszystkie = load_json(ANKIETA1_PATH)
+    wszystkie.append(dane)
+    save_json(ANKIETA1_PATH, wszystkie)
+    return jsonify({"message": "Odpowiedź zapisana"}), 201
+
+@app.route('/api/ankiety/inwestycje', methods=['GET'])
+def pobierz_ankieta1():
+    return jsonify(load_json(ANKIETA1_PATH))
+
+@app.route('/api/ankiety/ocena', methods=['POST'])
+def zapisz_ankiete2():
+    dane = request.json
+    wszystkie = load_json(ANKIETA2_PATH)
+    wszystkie.append(dane)
+    save_json(ANKIETA2_PATH, wszystkie)
+    return jsonify({"message": "Odpowiedź zapisana"}), 201
+
+@app.route('/api/ankiety/ocena', methods=['GET'])
+def pobierz_ankieta2():
+    return jsonify(load_json(ANKIETA2_PATH))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
