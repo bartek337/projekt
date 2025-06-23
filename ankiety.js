@@ -1,4 +1,4 @@
-// ankiety.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const user = localStorage.getItem("loggedUser");
   const info = document.getElementById("userInfo");

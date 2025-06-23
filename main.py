@@ -38,11 +38,11 @@ def add_wniosek():
     wnioski = load_wnioski()
     last_id = max([int(w["id"]) for w in wnioski if w.get("id", "").isdigit()], default=0)
     nowy = {
-        #"id": str(len(wnioski) + 1).zfill(3),
-        "id": str(last_id + 1).zfill(3),  # np. "009"
+        
+        "id": str(last_id + 1).zfill(3),  
         "typ": request.json.get("typ"),
         "opis": request.json.get("opis"),
-        "email": request.json.get("email"),  # Dodane
+        "email": request.json.get("email"),  
         "status": "oczekuje"
     }
     wnioski.append(nowy)
@@ -111,13 +111,13 @@ def save_komentarze(data):
     with open(KOMENTARZE_PATH, 'w') as f:
         json.dump(data, f, indent=2)
 
-# Pobieranie komentarzy dla konkretnego wydarzenia
+
 @app.route('/api/komentarze/<slug>', methods=['GET'])
 def get_komentarze(slug):
     all_comments = load_komentarze()
     return jsonify(all_comments.get(slug, []))
 
-# Dodawanie komentarza do konkretnego wydarzenia
+
 @app.route('/api/komentarze/<slug>', methods=['POST'])
 def add_komentarz(slug):
     all_comments = load_komentarze()

@@ -2586,7 +2586,7 @@ main h2 {
 
 .survey-card {
   background: #ffffff;
-  border-left: 5px solid #0b5d10; /* zieleń akcentująca */
+  border-left: 5px solid #0b5d10; 
   padding: 18px 22px;
   margin-bottom: 20px;
   border-radius: 12px;

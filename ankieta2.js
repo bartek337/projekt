@@ -1,4 +1,4 @@
-// ankieta2.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".ankieta-form");
 

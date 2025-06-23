@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Obsługa wyświetlania zalogowanego użytkownika
   const user = localStorage.getItem("loggedUser");
   const info = document.getElementById("userInfo");
   const loginBtn = document.getElementById("loginBtn");
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Obsługa formularza ankiety
+  
   const form = document.querySelector(".ankieta-form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();

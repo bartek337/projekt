@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const user = localStorage.getItem("loggedUser");
 
-  // Dodaj formularz lub komunikat
+  
   if (user) {
     dodajKomentarzDiv.insertAdjacentHTML('beforeend', `
       <form id="komentarz-form">
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `);
   }
 
-  // Pobierz komentarze z backendu
+  
   fetch(`http://localhost:5000/api/komentarze/${slug}`)
     .then(res => res.json())
     .then(data => {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // Obsługa formularza dodawania komentarzy
+  
   document.getElementById('komentarz-form')?.addEventListener('submit', e => {
     e.preventDefault();
     const tresc = e.target.tresc.value.trim();
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(res => res.json())
     .then(() => {
-      location.reload(); // odśwież stronę, by zobaczyć nowy komentarz
+      location.reload(); 
     });
   });
 });

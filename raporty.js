@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("stat-uzytkownicy").textContent = 123;
   document.getElementById("stat-komunikaty").textContent = 8;
 
-  // Ładowanie wyników ankiet
+  
   zaladujWyniki();
 });
 
@@ -31,7 +31,7 @@ function toggleUzytkownik(button) {
 }
 
 function zaladujWyniki() {
-  // Wyniki ankiety 1 – inwestycje
+  
   fetch("http://localhost:5000/api/ankiety/inwestycje")
     .then(res => res.json())
     .then(data => {
@@ -51,7 +51,7 @@ function zaladujWyniki() {
       console.error("Błąd przy pobieraniu ankiety inwestycyjnej:", err);
     });
 
-  // Wyniki ankiety 2 – ocena urzędu
+  
   fetch("http://localhost:5000/api/ankiety/ocena")
     .then(res => res.json())
     .then(data => {
