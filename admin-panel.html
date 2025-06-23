@@ -75,10 +75,10 @@
       info.innerText = `👤 ${user}`;
       loginBtn.innerText = "Wyloguj";
       loginBtn.href = "#";
-      loginBtn.onclick = () => {
-        localStorage.removeItem("loggedUser");
-        location.reload();
-      };
+     loginBtn.onclick = () => {
+      localStorage.removeItem("loggedUser");
+      window.location.href = "index.html"; // Przekierowanie na stronę główną
+    };
     }
   });
 </script>
