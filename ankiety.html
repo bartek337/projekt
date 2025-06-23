@@ -68,49 +68,19 @@
       <ul class="survey-list">
         <li>
           <h4>Która inwestycja jest Twoim zdaniem najważniejsza?</h4>
-          <a href="ankieta1.html" class="survey-btn">Przejdź do ankiety</a>
+          <button onclick="location.href='ankieta1.html'" class="survey-btn">Przejdź do ankiety</button>
         </li>
         <li>
           <h4>Ocena działalności urzędu gminy</h4>
-          <a href="ankieta2.html" class="survey-btn">Przejdź do ankiety</a>
+          <button onclick="location.href='ankieta2.html'" class="survey-btn">Przejdź do ankiety</button>
         </li>
       </ul>
     </section>
   </main>
+
+  <script src="ankiety.js"></script>
+
   <footer><p>&copy; 2025 Gmina Trzebieszów | Projekt Civica</p></footer>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const user = localStorage.getItem("loggedUser");
-    const info = document.getElementById("userInfo");
-    const loginBtn = document.getElementById("loginBtn");
-
-    if (user && info && loginBtn) {
-      info.innerText = `👤 ${user}`;
-      loginBtn.innerText = "Wyloguj";
-      loginBtn.href = "#";
-      loginBtn.onclick = () => {
-        localStorage.removeItem("loggedUser");
-        location.reload();
-      };
-    }
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const user = localStorage.getItem("loggedUser");
-    const info = document.getElementById("userInfo");
-    const loginBtn = document.getElementById("loginBtn");
-
-    if (user && info && loginBtn) {
-      info.innerText = `👤 ${user}`;
-      loginBtn.innerText = "Wyloguj";
-      loginBtn.href = "#";
-      loginBtn.onclick = () => {
-        localStorage.removeItem("loggedUser");
-        location.reload();
-      };
-    }
-  });
-</script>
+  
 </body>
 </html>

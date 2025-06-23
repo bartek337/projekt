@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("stat-wnioski").textContent = 27;
   document.getElementById("stat-uzytkownicy").textContent = 123;
   document.getElementById("stat-komunikaty").textContent = 8;
+
+  // Ładowanie wyników ankiet
+  zaladujWyniki();
 });
 
 function toggleWniosek(button) {
@@ -25,4 +28,51 @@ function toggleUzytkownik(button) {
     szczegoly.style.display = "block";
     button.textContent = "Ukryj szczegóły";
   }
+}
+
+function zaladujWyniki() {
+  // Wyniki ankiety 1 – inwestycje
+  fetch("http://localhost:5000/api/ankiety/inwestycje")
+    .then(res => res.json())
+    .then(data => {
+      const ul = document.getElementById("lista-ankieta1");
+      ul.innerHTML = "";
+      if (data.length === 0) {
+        ul.innerHTML = "<li>Brak odpowiedzi.</li>";
+        return;
+      }
+      data.forEach(entry => {
+        const li = document.createElement("li");
+        li.textContent = `Główna inwestycja: ${entry.inwestycja}, Dodatkowe działania: ${entry.dzialania?.join(", ") || "brak"}`;
+        ul.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error("Błąd przy pobieraniu ankiety inwestycyjnej:", err);
+    });
+
+  // Wyniki ankiety 2 – ocena urzędu
+  fetch("http://localhost:5000/api/ankiety/ocena")
+    .then(res => res.json())
+    .then(data => {
+      const ul = document.getElementById("lista-ankieta2");
+      ul.innerHTML = "";
+      if (data.length === 0) {
+        ul.innerHTML = "<li>Brak odpowiedzi.</li>";
+        return;
+      }
+      data.forEach(entry => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          Dostępność: ${entry.dostepnosc || "brak"}, 
+          Obsługa: ${entry.obsluga || "brak"}, 
+          Usprawnienia: ${entry.usprawnienia?.join(", ") || "brak"}<br>
+          Uwagi: ${entry.uwagi || "brak"}
+        `;
+        ul.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error("Błąd przy pobieraniu ankiety oceny urzędu:", err);
+    });
 }
