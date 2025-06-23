@@ -815,6 +815,20 @@ background-color: #0d7447;
     background: transparent;
     cursor: default;
   }
+
+  
+  
+  .active-day {
+    background-color: #3a7d4d !important;
+    color: white;
+    font-weight: bold;
+  }
+  .event-entry {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  
   
   /* PRAWY PANEL */
   .event-panel {
@@ -1827,6 +1841,24 @@ main h2 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* Styl aktywnego przycisku */
+.btn-primary {
+  background-color: #006400; /* ciemnozielony */
+  border-color: #006400;
+  color: white;
+}
+
+/* Styl nieaktywnego przycisku */
+.btn-outline-primary {
+  color: #006400;
+  border-color: #006400;
+}
+
+.btn-outline-primary:hover {
+  background-color: #006400;
+  color: white;
+}
+
 
 /* TESTOWE RAMKI */
 .section-card {
@@ -1851,46 +1883,57 @@ main h2 {
   margin: 0 auto;
   border-radius: 2px;
 }
-
-.news-item {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 20px 20px 20px 28px;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  overflow: hidden;
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
+.news-item {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.news-item:hover {
+  background-color: rgba(89, 157, 106, 0.15); /* delikatna zieleń */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Detale aktualności, domyślnie ukryte */
+.news-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  font-size: 0.9em;
+  color: #444;
+  margin-top: 8px;
+}
+
+/* Po najechaniu – pokaż szczegóły */
+.news-item:hover .news-details {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* (opcjonalnie) ozdobna linia przed każdą aktualnością */
 .news-item::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 6px;
-  background-color: transparent;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  transition: background-color 0.2s ease;
+  width: 5px;
+  background-color: #599d6a; /* ciemniejszy zielony */
+  border-radius: 8px 0 0 8px;
 }
 
-.news-item:hover {
-  transform: translateY(-2px);
-  background-color: rgba(89, 157, 106, 0.627); 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.news-item:hover::before {
-  background-color: #006400; 
-}
-
-.news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px; 
-}
 
 .content-section {
   max-width: 800px;
@@ -2069,7 +2112,7 @@ main h2 {
   margin: 0;
   padding: 8px 16px;
   display: inline-block;
-  background-color: rgba(49, 78, 59, 0.882); /* półprzezroczysta zieleń */
+  background-color: rgba(0, 0, 0, 0.6); 
   color: #ffffff;
   border-radius: 20px;
   text-align: center;
