@@ -98,6 +98,43 @@ def zapisz_ankiete2():
 def pobierz_ankieta2():
     return jsonify(load_json(ANKIETA2_PATH))
 
+KOMENTARZE_PATH = os.path.join("data", "komentarze.json")
+
+def load_komentarze():
+    if not os.path.exists(KOMENTARZE_PATH):
+        with open(KOMENTARZE_PATH, 'w') as f:
+            json.dump({}, f)
+    with open(KOMENTARZE_PATH, 'r') as f:
+        return json.load(f)
+
+def save_komentarze(data):
+    with open(KOMENTARZE_PATH, 'w') as f:
+        json.dump(data, f, indent=2)
+
+# Pobieranie komentarzy dla konkretnego wydarzenia
+@app.route('/api/komentarze/<slug>', methods=['GET'])
+def get_komentarze(slug):
+    all_comments = load_komentarze()
+    return jsonify(all_comments.get(slug, []))
+
+# Dodawanie komentarza do konkretnego wydarzenia
+@app.route('/api/komentarze/<slug>', methods=['POST'])
+def add_komentarz(slug):
+    all_comments = load_komentarze()
+    new_comment = {
+        "autor": request.json.get("autor", "Anonim"),
+        "tresc": request.json.get("tresc", ""),
+        "data": request.json.get("data", "")
+    }
+    if not new_comment["tresc"]:
+        return jsonify({"error": "Komentarz pusty"}), 400
+
+    if slug not in all_comments:
+        all_comments[slug] = []
+    all_comments[slug].append(new_comment)
+    save_komentarze(all_comments)
+    return jsonify(new_comment), 201
+
 
 if __name__ == '__main__':
     app.run(debug=True)

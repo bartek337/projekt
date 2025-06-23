@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
+<script src="komentarze.js" defer></script>
 <body>
   <header class="gmina-header">
     <div class="gmina-bar">
@@ -93,38 +94,9 @@
         <h3>Komentarze</h3>
         <hr class="podkreslenie">
   
-        <div class="komentarz">
-          <div class="komentarz-header">
-            <span class="autor">Michał J.</span>
-            <span class="data">2025-05-23</span>
-          </div>
-          <p>Super!</p>
-        </div>
-  
-        <div class="komentarz">
-          <div class="komentarz-header">
-            <span class="autor">Nikola B.</span>
-            <span class="data">2025-05-25</span>
-          </div>
-          <p>Wspaniała organizacja i gratulacje dla wygranych!!</p>
-        </div>
-  
         <div class="dodaj-komentarz">
           <h4>Dodaj komentarz</h4>
-          <script>
-            // Prosta symulacja czy użytkownik jest zalogowany (np. przez localStorage lub sesję)
-            const userLoggedIn = false; // tutaj zmień na true, jeśli chcesz zobaczyć formularz
-            if (!userLoggedIn) {
-              document.write('<div class="alert-login"><p>Aby dodać komentarz, <a href="login.html">zaloguj się</a>.</p></div>');
-            } else {
-              document.write(`
-                <form class="formularz-komentarz">
-                  <textarea placeholder="Napisz swój komentarz..." required></textarea>
-                  <button type="submit">Wyślij</button>
-                </form>
-              `);
-            }
-          </script>
+          
         </div>
       </section>
   </main>

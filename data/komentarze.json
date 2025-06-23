@@ -1,0 +1,23 @@
+{
+  "wydarzenie-aktywna": [
+    {
+      "autor": "anna.nowak",
+      "tresc": "test1",
+      "data": "2025-06-23"
+    }
+  ],
+  "wydarzenie-targowisko": [
+    {
+      "autor": "anna.nowak",
+      "tresc": "test2",
+      "data": "2025-06-23"
+    }
+  ],
+  "wydarzenie-zawody": [
+    {
+      "autor": "anna.nowak",
+      "tresc": "test3",
+      "data": "2025-06-23"
+    }
+  ]
+}
